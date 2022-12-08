@@ -21,38 +21,118 @@
 
 <body>
   <!-- Navegação -->
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 ">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo da pagina" id="logo_pagina">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="logo weather" id="logo_pagina">
         Weather</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+       <!--Barra de navegação-->
       <div class="collapse navbar-collapse" id="navmenu">
         <ul class="navbar-nav md-auto">
           <li class="nav-item">
-            <a href="index.html" class="nav-link">Home</a>
+            <a href="index.html" class="nav-link"><h5>Home</h5></a>
           </li>
           <li class="nav-item">
-            <a href="index.html" class="nav-link">Forecast</a>
+            <a href="index.html" class="nav-link"><h5>Forecast</h5></a>
           </li>
           <li class="nav-item">
-            <a href="index.html" class="nav-link">Favoritos</a>
+            <a href="index.html" class="nav-link"><h5>Favoritos</h5></a>
           </li>
         </ul>
 
-
-fgfdgdfg
       </div>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control-md" type="search" placeholder="Pesquisa">
-        <button  class="btn btn-primary btn-sm" type="submit"><i class="material-icons">search</i></button>
-      </form>
+      <!--Barra de Pesquisa-->
+      <div class="input-group ps-5">
+        <input type="search" class="form-control rounded" placeholder="Pesquisa"  />
+        <span class="input-group-text border-0 bg-secondary" id="search-addon">
+         <img src="img/icon_pesquisar.png">
+        </span>
+      </div>
+
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Unidades
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">ºC</a></li>
+          <li><a href="#">ºF</a></li>
+          
+        </ul>
+      </div>
     </div>
   </nav>
-  
-
+   <!--Mostrador do tempo das 6 cidades-->
+  <div class="container-fluid mt-5  overflow-hidden ">
+     <!--Primeira linha-->
+    <div class="row gy-5 mb-5">
+      <div class="col-3 bg-secondary rounded-2 mx-auto">
+        <h2 class="text-center ">Leiria</h2>
+        <hr>
+        <img src="img/sol.png" class="d-inline">
+        <h1 class="d-inline text-center">&emsp;&ensp;14ºC</h1>
+        <br>
+        <h5 class="">Nublado</h5>
+       <img src="img/favorito_preto.png" class="icon-favorito">
+      </div>
+      <div class="col-3 bg-secondary rounded-2 mx-auto ">
+        <h2 class="text-center ">Leiria</h2>
+        <hr>
+        <img src="img/sol.png" class="d-inline">
+        <h1 class="d-inline text-center">&emsp;&ensp;14ºC</h1>
+        <br>
+        <h5 class="">Nublado</h5>
+       <img src="img/favorito_preto.png" class="icon-favorito">
+      </div>
+      <div class="col-3 bg-secondary rounded-2 mx-auto">
+        <h2 class="text-center ">Leiria</h2>
+        <hr>
+        <img src="img/sol.png" class="d-inline">
+        <h1 class="d-inline text-center">&emsp;&ensp;14ºC</h1>
+        <br>
+        <h5 class="">Nublado</h5>
+       <img src="img/favorito_preto.png" class="icon-favorito">
+      </div>
+    </div>
+     <!--Segunda linha-->
+    <div class="row">
+      <div class="col-3 bg-secondary rounded-2 mx-auto">
+        <h2 class="text-center ">Leiria</h2>
+        <hr>
+        <img src="img/sol.png" class="d-inline">
+        <h1 class="d-inline text-center">&emsp;&ensp;14ºC</h1>
+        <br>
+        <h5 class="">Nublado</h5>
+       <img src="img/favorito_preto.png" class="icon-favorito">
+      </div>
+      <div class="col-3 bg-secondary rounded-2 mx-auto">
+        <h2 class="text-center ">Leiria</h2>
+        <hr>
+        <img src="img/sol.png" class="d-inline">
+        <h1 class="d-inline text-center">&emsp;&ensp;14ºC</h1>
+        <br>
+        <h5 class="">Nublado</h5>
+       <img src="img/favorito_preto.png" class="icon-favorito">
+      </div>
+      <div class="col-3 bg-secondary rounded-2 mx-auto">
+        <h2 class="text-center ">Leiria</h2>
+        <hr>
+        <img src="img/sol.png" class="d-inline">
+        <h1 class="d-inline text-center">&emsp;&ensp;14ºC</h1>
+        <br>
+        <h5 class="">Nublado</h5>
+        <img src="img/favorito_preto.png" class="icon-favorito">
+      </div>
+    </div>
+  </div>
+   <!--Footer-->
+  <div class="mt-5 p-4 bg-dark text-white text-center">
+    <p>© João, Francisco, Rúben</p>
+    <p>Unidade Curricular: PWC</p>
+    <hr>
+    <a href="https://openweathermap.org/api" target="_blank">OpenWeather</a>
+  </div>
+  <script src="js/javascript.js"></script>
 </body>
 
 </html>
