@@ -6,14 +6,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
-  </script>
+  
   <link rel="stylesheet" href="css/estilos.css">
 
 
@@ -66,61 +64,61 @@
   <div class="container-fluid mt-5  overflow-hidden ">
      <!--Primeira linha-->
     <div class="row gy-5 mb-5">
-      <div class="col-3 bg-secondary rounded-2 mx-auto">
-        <h2 class="text-center ">Leiria</h2>
+      <div class="col-3 bg-secondary rounded-2 mx-auto"> 
+        <h2 id="cidadeLisboa" class="text-center Lisboa">Cidade</h2> <!-- cidade -->
         <hr>
-        <img src="img/sol.png" class="d-inline">
-        <h1 class="d-inline text-center">&emsp;&ensp;14ºC</h1>
+        <img id="imagemLisboa" src="" class="d-inline"> <!-- imagem -->
+        <h1 id="tempLisboa" class="d-inline text-center">&emsp;&ensp;Temp</h1> <!-- Temp -->
         <br>
-        <h5 class="">Nublado</h5>
+        <h5 id="climaLisboa" class="">Clima</h5> <!-- clima -->
        <img src="img/favorito_preto.png" class="icon-favorito">
       </div>
       <div class="col-3 bg-secondary rounded-2 mx-auto ">
-        <h2 class="text-center ">Leiria</h2>
+        <h2 id="cidadeFaro" class="text-center ">Cidade</h2>
         <hr>
-        <img src="img/sol.png" class="d-inline">
-        <h1 class="d-inline text-center">&emsp;&ensp;14ºC</h1>
+        <img src="" class="d-inline" id="imagemFaro">
+        <h1 id="tempFaro" class="d-inline text-center">&emsp;&ensp;Temp</h1>
         <br>
-        <h5 class="">Nublado</h5>
+        <h5 id="climaFaro" class="">Clima</h5>
        <img src="img/favorito_preto.png" class="icon-favorito">
       </div>
       <div class="col-3 bg-secondary rounded-2 mx-auto">
-        <h2 class="text-center ">Leiria</h2>
+        <h2 id="cidadeSagres" class="text-center ">Cidade</h2>
         <hr>
-        <img src="img/sol.png" class="d-inline">
-        <h1 class="d-inline text-center">&emsp;&ensp;14ºC</h1>
+        <img id="imagemSagres" src="" class="d-inline">
+        <h1 id="tempSagres" class="d-inline text-center">&emsp;&ensp;Temp</h1>
         <br>
-        <h5 class="">Nublado</h5>
+        <h5 id="climaSagres" class="">Clima</h5>
        <img src="img/favorito_preto.png" class="icon-favorito">
       </div>
     </div>
      <!--Segunda linha-->
     <div class="row">
       <div class="col-3 bg-secondary rounded-2 mx-auto">
-        <h2 class="text-center ">Leiria</h2>
+        <h2 id="cidadeLagos" class="text-center ">Cidade</h2>
         <hr>
-        <img src="img/sol.png" class="d-inline">
-        <h1 class="d-inline text-center">&emsp;&ensp;14ºC</h1>
+        <img id="imagemLagos" src="" class="d-inline">
+        <h1 id="tempLagos" class="d-inline text-center">&emsp;&ensp;Temp</h1>
         <br>
-        <h5 class="">Nublado</h5>
+        <h5 id="climaLagos" class="">Clima</h5>
        <img src="img/favorito_preto.png" class="icon-favorito">
       </div>
       <div class="col-3 bg-secondary rounded-2 mx-auto">
-        <h2 class="text-center ">Leiria</h2>
+        <h2 id="cidadePorto" class="text-center ">Cidade</h2>
         <hr>
-        <img src="img/sol.png" class="d-inline">
-        <h1 class="d-inline text-center">&emsp;&ensp;14ºC</h1>
+        <img id="imagemPorto" src="" class="d-inline">
+        <h1 id="tempPorto" class="d-inline text-center">&emsp;&ensp;Temp</h1>
         <br>
-        <h5 class="">Nublado</h5>
+        <h5 id="climaPorto" class="">Clima</h5>
        <img src="img/favorito_preto.png" class="icon-favorito">
       </div>
       <div class="col-3 bg-secondary rounded-2 mx-auto">
-        <h2 class="text-center ">Leiria</h2>
+        <h2 id="cidadeLeiria" class="text-center ">Cidade</h2>
         <hr>
-        <img src="img/sol.png" class="d-inline">
-        <h1 class="d-inline text-center">&emsp;&ensp;14ºC</h1>
+        <img id="imagemLeiria" src="" class="d-inline">
+        <h1 id="tempLeiria" class="d-inline text-center">&emsp;&ensp;Temp</h1>
         <br>
-        <h5 class="">Nublado</h5>
+        <h5 id="climaLeiria" class="">Clima</h5>
         <img src="img/favorito_preto.png" class="icon-favorito">
       </div>
     </div>
@@ -132,6 +130,8 @@
     <hr>
     <a href="https://openweathermap.org/api" target="_blank">OpenWeather</a>
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="js/javascript.js"></script>
 </body>
 
