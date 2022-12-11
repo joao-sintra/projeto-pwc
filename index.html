@@ -6,12 +6,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="css/estilos.css">
 
 
@@ -26,52 +26,58 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
         <span class="navbar-toggler-icon"></span>
       </button>
-       <!--Barra de navegação-->
+      <!--Barra de navegação-->
       <div class="collapse navbar-collapse" id="navmenu">
         <ul class="navbar-nav md-auto">
           <li class="nav-item">
-            <a href="index.html" class="nav-link"><h5>Home</h5></a>
+            <a href="index.html" class="nav-link">
+              <h5>Home</h5>
+            </a>
           </li>
           <li class="nav-item">
-            <a href="index.html" class="nav-link"><h5>Forecast</h5></a>
+            <a href="index.html" class="nav-link">
+              <h5>Forecast</h5>
+            </a>
           </li>
           <li class="nav-item">
-            <a href="index.html" class="nav-link"><h5>Favoritos</h5></a>
+            <a href="index.html" class="nav-link">
+              <h5>Favoritos</h5>
+            </a>
           </li>
         </ul>
 
       </div>
       <!--Barra de Pesquisa-->
       <div class="input-group ps-5">
-        <input type="search" class="form-control rounded" placeholder="Pesquisa"  />
+        <input type="search" class="form-control rounded" placeholder="Pesquisa" id="textbox" />
         <span class="input-group-text border-0 bg-secondary" id="search-addon">
-         <img src="img/icon_pesquisar.png">
+          <img src="img/icon_pesquisar.png">
         </span>
       </div>
 
       <div class="dropdown">
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Unidades
-        <span class="caret"></span></button>
+          <span class="caret"></span></button>
         <ul class="dropdown-menu">
           <li><a href="#">ºC</a></li>
           <li><a href="#">ºF</a></li>
-          
+
         </ul>
       </div>
     </div>
   </nav>
-   <!--Mostrador do tempo das 6 cidades-->
+  <!--Mostrador do tempo das 6 cidades-->
   <div class="container-fluid mt-5  overflow-hidden ">
-     <!--Primeira linha-->
+    <!--Primeira linha-->
     <div class="row gy-5 mb-5">
-      <div class="col-3 bg-secondary rounded-2 mx-auto"> 
+      <div class="col-3 bg-secondary rounded-2 mx-auto">
         <h2 id="cidadeLisboa" class="text-center Lisboa">Cidade</h2> <!-- cidade -->
         <hr>
         <img id="imagemLisboa" src="" class="d-inline"> <!-- imagem -->
         <h1 id="tempLisboa" class="d-inline text-center">&emsp;&ensp;Temp</h1> <!-- Temp -->
         <br>
         <h5 id="climaLisboa" class="">Clima</h5> <!-- clima -->
-       <img src="img/favorito_preto.png" class="icon-favorito">
+        <img src="img/favorito_preto.png" class="icon-favorito">
       </div>
       <div class="col-3 bg-secondary rounded-2 mx-auto ">
         <h2 id="cidadeFaro" class="text-center ">Cidade</h2>
@@ -80,7 +86,7 @@
         <h1 id="tempFaro" class="d-inline text-center">&emsp;&ensp;Temp</h1>
         <br>
         <h5 id="climaFaro" class="">Clima</h5>
-       <img src="img/favorito_preto.png" class="icon-favorito">
+        <img src="img/favorito_preto.png" class="icon-favorito">
       </div>
       <div class="col-3 bg-secondary rounded-2 mx-auto">
         <h2 id="cidadeSagres" class="text-center ">Cidade</h2>
@@ -89,10 +95,10 @@
         <h1 id="tempSagres" class="d-inline text-center">&emsp;&ensp;Temp</h1>
         <br>
         <h5 id="climaSagres" class="">Clima</h5>
-       <img src="img/favorito_preto.png" class="icon-favorito">
+        <img src="img/favorito_preto.png" class="icon-favorito">
       </div>
     </div>
-     <!--Segunda linha-->
+    <!--Segunda linha-->
     <div class="row">
       <div class="col-3 bg-secondary rounded-2 mx-auto">
         <h2 id="cidadeLagos" class="text-center ">Cidade</h2>
@@ -101,7 +107,7 @@
         <h1 id="tempLagos" class="d-inline text-center">&emsp;&ensp;Temp</h1>
         <br>
         <h5 id="climaLagos" class="">Clima</h5>
-       <img src="img/favorito_preto.png" class="icon-favorito">
+        <img src="img/favorito_preto.png" class="icon-favorito">
       </div>
       <div class="col-3 bg-secondary rounded-2 mx-auto">
         <h2 id="cidadePorto" class="text-center ">Cidade</h2>
@@ -110,7 +116,7 @@
         <h1 id="tempPorto" class="d-inline text-center">&emsp;&ensp;Temp</h1>
         <br>
         <h5 id="climaPorto" class="">Clima</h5>
-       <img src="img/favorito_preto.png" class="icon-favorito">
+        <img src="img/favorito_preto.png" class="icon-favorito">
       </div>
       <div class="col-3 bg-secondary rounded-2 mx-auto">
         <h2 id="cidadeLeiria" class="text-center ">Cidade</h2>
@@ -123,7 +129,7 @@
       </div>
     </div>
   </div>
-   <!--Footer-->
+  <!--Footer-->
   <div class="mt-5 p-4 bg-dark text-white text-center">
     <p>© João, Francisco, Rúben</p>
     <p>Unidade Curricular: PWC</p>
