@@ -1,8 +1,11 @@
-#logo_pagina{
-    margin-left:10px;
-    width: 70px;
+#logo_pagina {
+  margin-left: 10px;
+  width: 70px;
 }
 
-.icon-favorito{
-    float: right;
+.icon-favorito {
+  float: right;
+}
+.navbar-collapse.collapse.in {
+  display: block !important;
 }
