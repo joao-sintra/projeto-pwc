@@ -29,13 +29,12 @@ let weatherC = {
     const { icon, description } = data.weather[0];
     const { temp } = data.main;
 
-
-
     document.querySelector("#cidade" + name).innerHTML = name;
     document.querySelector("#temp" + name).innerHTML = temp + " ºC";
     document.querySelector("#imagem" + name).src = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
     document.querySelector("#clima" + name).innerHTML = colocaMaiuscula(description);
   },
+  /*-------Mostrar os dados das cidades em [Array] à escolha do utilizador (Autocomplete-Box)-----*/
   fetchCities: function (cidade) {
     fetch(
       "http://api.openweathermap.org/geo/1.0/direct?q=" + cidade + "&limit=5&appid=" + this.apiKey
@@ -62,12 +61,10 @@ weatherC.fetchWeather("Porto");
 weatherC.fetchWeather("Leiria");
 
 
-/*-------pesquisa das cidades à escolha do utilizador (variáveis e constantes)-----*/
-
+/*-------pesquisa das cidades à escolha do utilizador, conforme o que é escrito na (#textbox)-----*/
 
 $("#search-addon").click(function (e) {
   e.preventDefault();
-  //Pesquisar todos os id's "textbox",  pegando no que o utilizador escreve, pra depois procurar na api
 
 });
 
@@ -76,7 +73,7 @@ $("#textbox").keyup(function (event) {
   if (event.target.value === "") {
     $(".autocom-box").hide();
   }
-  weatherC.fetchCities(document.querySelector("#textbox").value)////Pesquisar todos os id's "textbox",  pegando no que o utilizador escreve, pra depois procurar na API
+  weatherC.fetchCities(document.querySelector("#textbox").value)//Pesquisar todos os id's "#textbox", pegando no que o utilizador escreve, pra depois procurar na API
 
 });
 
