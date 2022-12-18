@@ -73,8 +73,18 @@ $("#textbox").keyup(function (event) {
   if (event.target.value === "") {
     $(".autocom-box").hide();
   }
+
   weatherC.fetchCities(document.querySelector("#textbox").value)//Pesquisar todos os id's "#textbox", pegando no que o utilizador escreve, pra depois procurar na API
 
+});
+
+
+/*-------Quando o utilzador clica fora da (Autocom-box) ela fecha.-----*/
+document.addEventListener("click", function ClickOutsideBox(event) {
+  const box = document.getElementById("autocom-box");
+  if (event.target.value !== box) {
+    $(".autocom-box").hide();
+  }
 });
 
 
@@ -114,6 +124,3 @@ $("#textbox").keyup(function (event) {
 // weatherF.fetchWeather("Leiria");
 
 /*--------------//------//---------------*/
-
-
-
