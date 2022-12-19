@@ -63,6 +63,7 @@ weatherC.fetchWeather("Lagos");
 weatherC.fetchWeather("Porto");
 weatherC.fetchWeather("Leiria");
 
+
 /*-------pesquisa das cidades à escolha do utilizador (variáveis e constantes)-----*/
 const searchBtn = document.querySelector("#search-addon");
 
@@ -103,3 +104,10 @@ searchBtn.addEventListener("click", function (e) {
 // weatherF.fetchWeather("Leiria");
 
 /*--------------//------//---------------*/
+//funcção para comverter o 
+/*function getPontoCardial(angulo) {
+  const direcoes = ['↑ N', '↗ NE', '→ E', '↘ SE', '↓ S', '↙ SW', '← W', '↖ NW'];
+  return direcoes[Math.round(angulo / 45) % 8];
+}
+//document.querySelector("#paragrafo").innerHTML = getCardinalDirection(100);
+*/

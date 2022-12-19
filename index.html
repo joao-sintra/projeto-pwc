@@ -16,8 +16,8 @@
 
 <body>
   <!-- Navegação -->
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 ">
-    <div class="container">
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 justify-content-between ">
+    
       <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="logo weather" id="logo_pagina">
         Weather</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
@@ -25,8 +25,8 @@
       </button>
       <!--Barra de navegação-->
       <div class="collapse navbar-collapse" id="navmenu">
-        <ul class="navbar-nav md-auto">
-          <li class="nav-item">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
             <a href="index.html" class="nav-link">
               <h5>Home</h5>
             </a>
@@ -57,13 +57,14 @@
           <li><a href="#">ºF, Mph, In</a></li>
         </ul>
       </div>
-    </div>
+    
   </nav>
   <!--Mostrador do tempo das 6 cidades-->
-  <div class="container-fluid mt-5  overflow-hidden ">
+  <div class="container-fluid mt-5 overflow-hidden ">
     <!--Primeira linha-->
-    <div class="row gy-5 mb-5">
-      <div class="col-3 bg-secondary rounded-2 mx-auto">
+    
+    <div class="row mb-5 justify-content-center">
+      <div class="col-3 rounded-2 ">
         <h2 id="cidadeLisboa" class="text-center Lisboa">Cidade</h2> <!-- cidade -->
         <hr>
         <img id="imagemLisboa" src="" class="d-inline"> <!-- imagem -->
@@ -72,7 +73,7 @@
         <h5 id="climaLisboa" class="">Clima</h5> <!-- clima -->
         <img src="img/favorito_preto.png" class="icon-favorito">
       </div>
-      <div class="col-3 bg-secondary rounded-2 mx-auto ">
+      <div class="col-3 bg-secondary rounded-2  ">
         <h2 id="cidadeFaro" class="text-center ">Cidade</h2>
         <hr>
         <img src="" class="d-inline" id="imagemFaro">
@@ -81,7 +82,12 @@
         <h5 id="climaFaro" class="">Clima</h5>
         <img src="img/favorito_preto.png" class="icon-favorito">
       </div>
-      <div class="col-3 bg-secondary rounded-2 mx-auto">
+      
+    </div>
+    <!--Segunda linha-->
+    <div class="row mb-5 justify-content-center">
+      
+      <div class="col-3 rounded-2">
         <h2 id="cidadeSagres" class="text-center ">Cidade</h2>
         <hr>
         <img id="imagemSagres" src="" class="d-inline">
@@ -90,10 +96,7 @@
         <h5 id="climaSagres" class="">Clima</h5>
         <img src="img/favorito_preto.png" class="icon-favorito">
       </div>
-    </div>
-    <!--Segunda linha-->
-    <div class="row">
-      <div class="col-3 bg-secondary rounded-2 mx-auto">
+      <div class="col-3 rounded-2 ">
         <h2 id="cidadeLagos" class="text-center ">Cidade</h2>
         <hr>
         <img id="imagemLagos" src="" class="d-inline">
@@ -102,7 +105,11 @@
         <h5 id="climaLagos" class="">Clima</h5>
         <img src="img/favorito_preto.png" class="icon-favorito">
       </div>
-      <div class="col-3 bg-secondary rounded-2 mx-auto">
+      
+    </div>
+    <div class="row justify-content-center">
+      
+      <div class="col-3 rounded-2 ">
         <h2 id="cidadePorto" class="text-center ">Cidade</h2>
         <hr>
         <img id="imagemPorto" src="" class="d-inline">
@@ -111,7 +118,7 @@
         <h5 id="climaPorto" class="">Clima</h5>
         <img src="img/favorito_preto.png" class="icon-favorito">
       </div>
-      <div class="col-3 bg-secondary rounded-2 mx-auto">
+      <div class="col-3 rounded-2">
         <h2 id="cidadeLeiria" class="text-center ">Cidade</h2>
         <hr>
         <img id="imagemLeiria" src="" class="d-inline">

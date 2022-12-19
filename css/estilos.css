@@ -5,6 +5,7 @@
 
 .icon-favorito {
   float: right;
+  margin-bottom: 10px;
 }
 .navbar-collapse.collapse.in {
   display: block !important;
@@ -15,4 +16,18 @@
 
 .btn.btn-primary.dropdown-toggle{
     margin-left: 10px !important;
+}
+.col-3{
+  background-color: #8ab4df !important;
+  margin: 40px;
+}
+h2{
+  margin-top: 12px;
+}
+.navbar-brand{
+  font-size: 30px;
+  
+}
+h5{
+font-size: 23px;
 }
