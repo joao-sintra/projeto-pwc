@@ -9,3 +9,10 @@
 .navbar-collapse.collapse.in {
   display: block !important;
 }
+#icon-barra-pesquisa{
+    width: 25px;
+}
+
+.btn.btn-primary.dropdown-toggle{
+    margin-left: 10px !important;
+}
