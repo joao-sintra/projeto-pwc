@@ -61,7 +61,7 @@ weatherC.fetchWeather("Porto");
 weatherC.fetchWeather("Leiria");
 
 
-/*-------pesquisa das cidades à escolha do utilizador, conforme o que é escrito na (#textbox)-----*/
+/*-------pesquisa das cidades à escolha do utilizador, conforme o que é escrito na (#textbox).-----*/
 
 $("#search-addon").click(function (e) {
   e.preventDefault();
