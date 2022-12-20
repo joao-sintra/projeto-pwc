@@ -9,7 +9,7 @@
 .navbar-collapse.collapse.in {
   display: block !important;
 }
-.autocom-box:not(:focus) {
+.autocom-box {
   color: rgb(0, 0, 0);
   position: absolute;
   top: 35px;
