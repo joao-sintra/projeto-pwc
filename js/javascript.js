@@ -68,7 +68,7 @@ $("#search-addon").click(function (e) {
 
 });
 
-$("#textbox").keyup(function (event) {//Cada vez que o utilizador der release na tecla, ao escrever, é efetuada a pesquisa na API
+$("#textbox").keyup(function (event) {//Cada vez que o utilizador der release na tecla, ao escrever, é efetuada a pesquisa na API.
   $(".autocom-box").show();
   if (event.target.value === "") {
     $(".autocom-box").hide();
