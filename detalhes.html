@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>WEATHER</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <!-- Navegação -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 justify-content-between ">
+    
+      <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="logo weather" id="logo_pagina">
+        Weather</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--Barra de navegação-->
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a href="index.html" class="nav-link">
+              <h5>Home</h5>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="forecast.html" class="nav-link">
+              <h5>Forecast</h5>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="favoritos.html" class="nav-link">
+              <h5>Favoritos</h5>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!--Barra de Pesquisa-->
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" id="textbox" aria-label="Search" >
+        <button class="btn btn-outline-info my-2 my-sm-0" id="search-addon" type="submit">Pesquisa</button>
+      </form>
+
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Unidades
+          <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">ºC, km/h, Mm</a></li>
+          <li><a href="#">ºF, Mph, In</a></li>
+        </ul>
+      </div>
+    
+  </nav>
+  <!--Mostrador do tempo das 6 cidades-->
+  <div class="container-fluid mt-5 overflow-hidden ">
+    <!--Primeira linha-->
+    
+    
+  </div>
+  <!--Footer-->
+  <div class="mt-5 p-4 bg-dark text-white text-center">
+    <p>© João, Francisco, Rúben</p>
+    <p>Unidade Curricular: PWC</p>
+    <hr>
+    <a href="https://openweathermap.org/api" target="_blank">OpenWeather</a>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="js/javascript.js"></script>
+</body>
+
+</html>

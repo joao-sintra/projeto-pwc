@@ -17,9 +17,10 @@
 .btn.btn-primary.dropdown-toggle{
     margin-left: 10px !important;
 }
-.col-3{
+.lista-6-cidades, .lista-forecast{
   background-color: #8ab4df !important;
   margin: 40px;
+  border: 3px solid black;
 }
 h2{
   margin-top: 12px;
@@ -30,4 +31,17 @@ h2{
 }
 h5{
 font-size: 23px;
+}
+.table, #forecast {
+  margin: auto;
+  width: 50% !important; 
+}
+.temp-max{
+  color:rgb(174, 130, 49);
+}
+.temp-min{
+  color:rgb(50, 59, 161);
+}
+.humidade{
+  display: inline;
 }
