@@ -17,6 +17,9 @@
 #textbox{
   width: 200px;
 }
+#barraPesquisa{
+  width: 300px;
+}
 .btn.btn-primary.dropdown-toggle{
     margin-left: 10px !important;
 }
