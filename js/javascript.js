@@ -72,6 +72,7 @@ searchBtn.addEventListener("click", function (e) {
   weatherC.fetchCities(document.querySelector("#textbox").value);
 });
 
+
 /*--------------//------//---------------*/
 
 /*----- Funções para vizualizar a metereologia das 6 cidades da HOME page com unidade imperial (ºF) -----*/
@@ -107,7 +108,7 @@ searchBtn.addEventListener("click", function (e) {
 //funcção para comverter o 
 /*function getPontoCardial(angulo) {
   const direcoes = ['↑ N', '↗ NE', '→ E', '↘ SE', '↓ S', '↙ SW', '← W', '↖ NW'];
-  return direcoes[Math.round(angulo / 45) % 8];
+  return direcoes[Math.round(angulo / 45) % 8];//Dividi a roda dos ventos em 8 partes iguais (360/8 =45)
 }
 //document.querySelector("#paragrafo").innerHTML = getCardinalDirection(100);
 */

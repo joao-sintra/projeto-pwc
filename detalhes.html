@@ -17,56 +17,92 @@
 <body>
   <!-- Navegação -->
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 justify-content-between ">
-    
-      <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="logo weather" id="logo_pagina">
-        Weather</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!--Barra de navegação-->
-      <div class="collapse navbar-collapse" id="navmenu">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item ">
-            <a href="index.html" class="nav-link">
-              <h5>Home</h5>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="forecast.html" class="nav-link">
-              <h5>Forecast</h5>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="favoritos.html" class="nav-link">
-              <h5>Favoritos</h5>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!--Barra de Pesquisa-->
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" id="textbox" aria-label="Search" >
-        <button class="btn btn-outline-info my-2 my-sm-0" id="search-addon" type="submit">Pesquisa</button>
-      </form>
 
-      <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Unidades
-          <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li><a href="#">ºC, km/h, Mm</a></li>
-          <li><a href="#">ºF, Mph, In</a></li>
-        </ul>
-      </div>
+    <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="logo weather" id="logo_pagina">
+      Weather</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--Barra de navegação-->
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a href="index.html" class="nav-link">
+            <h5>Home</h5>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a href="forecast.html" class="nav-link">
+            <h5>Forecast</h5>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="favoritos.html" class="nav-link">
+            <h5>Favoritos</h5>
+          </a>
+        </li>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" id="textbox" aria-label="Search">
+          <button class="btn btn-outline-info my-2 my-sm-0" id="search-addon" type="submit">Pesquisa</button>
+        </form>
     
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Unidades
+            <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">ºC, km/h, Mm</a></li>
+            <li><a href="#">ºF, Mph, In</a></li>
+          </ul>
+        </div>
+      </ul>
+     
+    </div>
+    <!--Barra de Pesquisa-->
+    
+
   </nav>
-  <!--Mostrador do tempo das 6 cidades-->
+
   <div class="container-fluid mt-5 overflow-hidden ">
-    <!--Primeira linha-->
-    
-    
+    <h1 class="text-center"><u>Detalhes</u></h1>
+    <div id="detalhes">
+      <h4 id="data-hora">14-12-2022 14:30</h4>
+      <h2>Lisboa</h2>
+      <ul class="list-group mb-5">
+        <li class="list-group-item"><img id="imagemLisboa" src="http://openweathermap.org/img/wn/04n@2x.png"
+            class="d-inline">
+          <h5 class="d-inline">Temperatura</h5>
+        </li>
+        <li class="list-group-item">
+          <h5>Nublado</h5>
+        </li>
+        <li class="list-group-item">
+          <h5>Sensação térmica: 9ºC</h5>
+        </li>
+        <li class="list-group-item">
+          <img id="imagemVento" src="img/vento.png">
+          <h5 class="d-inline">x m/s</h5>
+        </li>
+        <li class="list-group-item">
+          <img id="imagemNuvens" src="img/nuvem.png">
+          <h5 class="d-inline">Nuvens</h5>
+        </li>
+        <li class="list-group-item">
+          <img id="imagemHumidade" src="img/humidade.png" class="d-inline">
+          <h5 class="d-inline">Humidade 20%</h5>
+        </li>
+        <li class="list-group-item">
+          <img id="imagemGlobo" src="img/globo.png" class="d-inline">
+          <h5 class="d-inline"> Coordenadas geofráficas: </h5>
+        </li>
+        <li class="list-group-item align-content-end" >
+          <img src="img/favorito_preto.png" class="icon-favorito">
+        </li>
+      </ul>
+    </div>
+
   </div>
   <!--Footer-->
-  <div class="mt-5 p-4 bg-dark text-white text-center">
+  <div class="pl-4  p-4 bg-dark text-white text-center">
     <p>© João, Francisco, Rúben</p>
     <p>Unidade Curricular: PWC</p>
     <hr>

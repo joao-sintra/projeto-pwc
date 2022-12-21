@@ -42,28 +42,31 @@
             </a>
           </li>
         </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" id="textbox" aria-label="Search" >
+          <button class="btn btn-outline-info my-2 my-sm-0" id="search-addon" type="submit">Pesquisa</button>
+        </form>
+  
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Unidades
+            <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">ºC, km/h, Mm</a></li>
+            <li><a href="#">ºF, Mph, In</a></li>
+          </ul>
+        </div>
       </div>
       <!--Barra de Pesquisa-->
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" id="textbox" aria-label="Search" >
-        <button class="btn btn-outline-info my-2 my-sm-0" id="search-addon" type="submit">Pesquisa</button>
-      </form>
-
-      <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Unidades
-          <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li><a href="#">ºC, km/h, Mm</a></li>
-          <li><a href="#">ºF, Mph, In</a></li>
-        </ul>
-      </div>
+      
     
   </nav>
   <!--Mostrador do tempo das 6 cidades-->
-  <div class="container-fluid mt-5 overflow-hidden ">
+  <div class="container-fluid mt-5 overflow-hidden p-5">
     <!--Primeira linha-->
+    
     <h1 class="text-center"><u>Bem-vido ao Weather</u></h1>
-    <div class="row mb-5 justify-content-center">
+    
+    <div class="row mb-5  justify-content-center">
       <div class="col-md-3 lista-6-cidades rounded-3 ">
         <h2 id="cidadeLisboa" class="text-center Lisboa">Cidade</h2> <!-- cidade -->
         <hr>
@@ -84,6 +87,7 @@
       </div>
       
     </div>
+  
     <!--Segunda linha-->
     <div class="row mb-5 justify-content-center">
       
