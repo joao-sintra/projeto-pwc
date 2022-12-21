@@ -39,6 +39,7 @@ let weatherC = {
     document.querySelector("#clima" + name).innerHTML =
       colocaMaiuscula(description);
   },
+  /*-------Mostrar os dados das cidades em [Array] à escolha do utilizador (Autocomplete-Box)-----*/
   fetchCities: function (cidade) {
     fetch(
       "http://api.openweathermap.org/geo/1.0/direct?q=" +
@@ -47,15 +48,20 @@ let weatherC = {
         this.apiKey
     )
       .then((response) => response.json())
-      .then((data) => console.log(data));
+      .then((data) => this.displaycities(data));
   },
-  displayCities: function (data) {
-    const { name } = data;
-    const { coutry } = data;
-    const { state } = data;
-  },
+  displaycities: function (data) {
+    let cidades = ""
+    let pais = ""
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].name) {
+        cidades = cidades + data[i].name + " " + "(" + data[i].country + ")" + "<br>"
+      }
+    }
+    document.querySelector(".autocom-box").innerHTML = cidades;
+  }
+  
 };
-
 weatherC.fetchWeather("Lisboa");
 weatherC.fetchWeather("Faro");
 weatherC.fetchWeather("Sagres");
@@ -64,13 +70,32 @@ weatherC.fetchWeather("Porto");
 weatherC.fetchWeather("Leiria");
 
 
-/*-------pesquisa das cidades à escolha do utilizador (variáveis e constantes)-----*/
-const searchBtn = document.querySelector("#search-addon");
+/*-------pesquisa das cidades à escolha do utilizador, conforme o que é escrito na (#textbox)-----*/
 
-searchBtn.addEventListener("click", function (e) {
+$("#search-addon").click(function (e) {
   e.preventDefault();
-  weatherC.fetchCities(document.querySelector("#textbox").value);
+
 });
+
+$("#textbox").keyup(function (event) {//Cada vez que o utilizador der release na tecla, ao escrever, é efetuada a pesquisa na API.
+  $(".autocom-box").show();
+  if (event.target.value === "") {
+    $(".autocom-box").hide();
+  }
+
+  weatherC.fetchCities(document.querySelector("#textbox").value)//Pesquisar todos os id's "#textbox", pegando no que o utilizador escreve, pra depois procurar na API
+
+});
+
+
+/*-------Quando o utilzador clica fora da (Autocom-box) ela fecha.-----*/
+document.addEventListener("click", function ClickOutsideBox(event) {
+  const box = document.getElementById("autocom-box");
+  if (event.target.value !== box) {
+    $(".autocom-box").hide();
+  }
+});
+
 
 
 /*--------------//------//---------------*/

@@ -42,21 +42,34 @@
             </a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" id="textbox" aria-label="Search" >
-          <button class="btn btn-outline-info my-2 my-sm-0" id="search-addon" type="submit">Pesquisa</button>
-        </form>
-  
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Unidades
-            <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">ºC, km/h, Mm</a></li>
-            <li><a href="#">ºF, Mph, In</a></li>
-          </ul>
+
+      
+      <!--Barra de Pesquisa-->
+      <div class="input-group ps-5">
+        <input type="search" class="form-control rounded" placeholder="Pesquisa" id="textbox" />
+        <div class="autocom-box">
+          <!--Barra de autocomplete (Pesquisa)  -->
+          <li>some content</li>
+          <li>some content</li>
+          <li>some content</li>
+          <li>some content</li>
+          <li>some content</li>
         </div>
       </div>
-      <!--Barra de Pesquisa-->
+      <span class="input-group-text border-0 bg-secondary" id="search-addon">
+        <img src="img/icon_pesquisar.png">
+      </span>
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Unidades
+          <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">ºC</a></li>
+          <li><a href="#">ºF</a></li>
+
+        </ul>
+      </div>
+    </div>
+    </div>
       
     
   </nav>

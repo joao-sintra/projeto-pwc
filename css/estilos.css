@@ -10,6 +10,7 @@
 .navbar-collapse.collapse.in {
   display: block !important;
 }
+
 #icon-barra-pesquisa{
     width: 25px;
 }
@@ -43,4 +44,16 @@ h2{
 }
 .humidade{
   display: inline;
+}
+.autocom-box {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 35px;
+  left: 49px;
+  list-style: none;
+  width: 461px;
+  z-index: 5;
+  background-color: rgba(251, 251, 251, 0.94);
+  display: none;
+
 }
