@@ -14,7 +14,9 @@
 #icon-barra-pesquisa{
     width: 25px;
 }
-
+#textbox{
+  width: 200px;
+}
 .btn.btn-primary.dropdown-toggle{
     margin-left: 10px !important;
 }

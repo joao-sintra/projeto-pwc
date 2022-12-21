@@ -17,48 +17,44 @@
 <body>
   <!-- Navegação -->
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 justify-content-between ">
-    
-      <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="logo weather" id="logo_pagina">
-        Weather</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!--Barra de navegação-->
-      <div class="collapse navbar-collapse" id="navmenu">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a href="index.html" class="nav-link">
-              <h5>Home</h5>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="forecast.html" class="nav-link">
-              <h5>Forecast</h5>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="favoritos.html" class="nav-link">
-              <h5>Favoritos</h5>
-            </a>
-          </li>
-        </ul>
 
+    <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="logo weather" id="logo_pagina">
+      Weather</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--Barra de navegação-->
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a href="index.html" class="nav-link">
+            <h5>Home</h5>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="forecast.html" class="nav-link">
+            <h5>Forecast</h5>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="favoritos.html" class="nav-link">
+            <h5>Favoritos</h5>
+          </a>
+        </li>
+      </ul>
       
+
       <!--Barra de Pesquisa-->
-      <div class="input-group ps-5">
-        <input type="search" class="form-control rounded" placeholder="Pesquisa" id="textbox" />
+      <div class="input-group my-2 my-lg-0">
+        <input type="search" class="form-control rounded mr-sm-2" placeholder="Pesquisa" id="textbox" />
         <div class="autocom-box">
-          <!--Barra de autocomplete (Pesquisa)  -->
-          <li>some content</li>
-          <li>some content</li>
-          <li>some content</li>
-          <li>some content</li>
-          <li>some content</li>
+
         </div>
-      </div>
+      
       <span class="input-group-text border-0 bg-secondary" id="search-addon">
-        <img src="img/icon_pesquisar.png">
+        <img id="icon-barra-pesquisa" src="img/icon_pesquisar.png">
       </span>
+    </div>
       <div class="dropdown">
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Unidades
           <span class="caret"></span></button>
@@ -69,16 +65,16 @@
         </ul>
       </div>
     </div>
-    </div>
-      
     
+
+
   </nav>
   <!--Mostrador do tempo das 6 cidades-->
   <div class="container-fluid mt-5 overflow-hidden p-5">
     <!--Primeira linha-->
-    
+
     <h1 class="text-center"><u>Bem-vido ao Weather</u></h1>
-    
+
     <div class="row mb-5  justify-content-center">
       <div class="col-md-3 lista-6-cidades rounded-3 ">
         <h2 id="cidadeLisboa" class="text-center Lisboa">Cidade</h2> <!-- cidade -->
@@ -98,12 +94,12 @@
         <h5 id="climaFaro" class="">Clima</h5>
         <img src="img/favorito_preto.png" class="icon-favorito">
       </div>
-      
+
     </div>
-  
+
     <!--Segunda linha-->
     <div class="row mb-5 justify-content-center">
-      
+
       <div class="col-md-3 lista-6-cidades rounded-3">
         <h2 id="cidadeSagres" class="text-center ">Cidade</h2>
         <hr>
@@ -122,10 +118,10 @@
         <h5 id="climaLagos" class="">Clima</h5>
         <img src="img/favorito_preto.png" class="icon-favorito">
       </div>
-      
+
     </div>
     <div class="row justify-content-center">
-      
+
       <div class="col-md-3 lista-6-cidades rounded-3 ">
         <h2 id="cidadePorto" class="text-center ">Cidade</h2>
         <hr>
