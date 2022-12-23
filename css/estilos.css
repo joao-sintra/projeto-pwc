@@ -53,12 +53,23 @@ h2{
 .autocom-box {
   color: rgb(0, 0, 0);
   position: absolute;
-  top: 35px;
-  left: 49px;
-  list-style: none;
-  width: 461px;
+  top: 40px;
+  width: 200px;
   z-index: 5;
-  background-color: rgba(251, 251, 251, 0.94);
+  background-color: white;
   display: none;
-
+  border: 3px solid black;
+  font-size: 17px;
+  
+}
+.autocom-box ul{
+  padding: 0;
+ 
+  list-style: none;
+}
+.autocom-box ul li{
+  padding: 5px 0;
+}
+.autocom-box ul li:hover {
+  background: rgb(149, 158, 238);
 }

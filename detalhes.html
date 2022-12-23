@@ -41,30 +41,30 @@
             <h5>Favoritos</h5>
           </a>
         </li>
-        <div class="input-group my-2 my-lg-0" id="barraPesquisa">
-          <input type="search" class="form-control rounded mr-sm-2" placeholder="Pesquisa" id="textbox" />
-          <div class="autocom-box">
-  
-          </div>
-        
-        <span class="input-group-text border-0 bg-secondary" id="search-addon">
-          <img id="icon-barra-pesquisa" src="img/icon_pesquisar.png">
-        </span>
-      </div>
-    
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Unidades
-            <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">ºC, km/h, Mm</a></li>
-            <li><a href="#">ºF, Mph, In</a></li>
-          </ul>
-        </div>
       </ul>
-     
+      <form action="/detalhes.html" method="GET" autocomplete="off">
+        <div class="input-group my-2 my-lg-0" id="barraPesquisa">
+          <input type="text" class="form-control rounded mr-sm-2" placeholder="Pesquisa" name="cidade" id="textbox" />
+          <div class="autocom-box">
+          </div>
+
+          <input type="submit" class="btn btn-secondary" value="Pesquisar">
+
+        </div>
+      </form>
+
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Unidades
+          <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">ºC, km/h, Mm</a></li>
+          <li><a href="#">ºF, Mph, In</a></li>
+        </ul>
+      </div>
+
     </div>
     <!--Barra de Pesquisa-->
-    
+
 
   </nav>
 
@@ -72,35 +72,43 @@
     <h1 class="text-center"><u>Detalhes</u></h1>
     <div id="detalhes">
       <h4 id="data-hora">14-12-2022 14:30</h4>
-      <h2>Lisboa</h2>
+      <h2 id="desc-cidade">Lisboa</h2>
       <ul class="list-group mb-5">
-        <li class="list-group-item"><img id="imagemLisboa" src="http://openweathermap.org/img/wn/04n@2x.png"
+        <li class="list-group-item"><img id="desc-imagem" src="http://openweathermap.org/img/wn/04n@2x.png"
             class="d-inline">
-          <h5 class="d-inline">Temperatura</h5>
+          <h4 class="d-inline" id="desc-temperatura">Temperatura</h4>
         </li>
         <li class="list-group-item">
-          <h5>Nublado</h5>
+          <h5 id="desc-clima">Nublado</h5>
         </li>
         <li class="list-group-item">
-          <h5>Sensação térmica: 9ºC</h5>
+          <h6 id="desc-sens-termica">Sensação térmica: 9ºC</h6>
         </li>
         <li class="list-group-item">
-          <img id="imagemVento" src="img/vento.png">
-          <h5 class="d-inline">x m/s</h5>
+          <img id="imagemVento" src="img/vento.png" alt="Vento" title="Vento">
+          <h5 class="d-inline" id="desc-vento">x m/s</h5>
         </li>
         <li class="list-group-item">
-          <img id="imagemNuvens" src="img/nuvem.png">
-          <h5 class="d-inline">Nuvens</h5>
+          <img id="imagemRosaVento" src="img/rosa_vento.png" alt="Rosa dos Ventos" title="Direção do vento">
+          <h5 class="d-inline" id="desc-direcao-vento">S</h5>
         </li>
         <li class="list-group-item">
-          <img id="imagemHumidade" src="img/humidade.png" class="d-inline">
-          <h5 class="d-inline">Humidade 20%</h5>
+          <img id="imagemPressaoAtm" src="img/pressao_atm.png" alt="Pressao atmosferica" title="Pressao atmosferica">
+          <h5 class="d-inline" id="desc-pressao-atm">x hPa</h5>
         </li>
         <li class="list-group-item">
-          <img id="imagemGlobo" src="img/globo.png" class="d-inline">
-          <h5 class="d-inline"> Coordenadas geofráficas: </h5>
+          <img id="imagemNuvens" src="img/nuvem.png" alt="Nuvem" title="Nuvens">
+          <h5 class="d-inline" id="desc-nuvens">Nuvens</h5>
         </li>
-        <li class="list-group-item align-content-end" >
+        <li class="list-group-item">
+          <img id="imagemHumidade" src="img/humidade.png"  alt="Humidade" title="Humidade">
+          <h5 class="d-inline" id="desc-humidade">Humidade 20%</h5>
+        </li>
+        <li class="list-group-item">
+          <img id="imagemGlobo" src="img/globo.png" class="d-inline" alt="Globo" title="Coordenadas geofráficas">
+          <h5 class="d-inline" id="desc-cord-geo"> Coordenadas geofráficas: </h5>
+        </li>
+        <li class="list-group-item align-content-end">
           <img src="img/favorito_preto.png" class="icon-favorito">
         </li>
       </ul>
@@ -124,7 +132,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="js/javascript.js"></script>
+  <script src="js/script_detalhes.js"></script>
+  <script src="js/scirpt_favoritos.js"></script>
+
 </body>
 
 </html>
