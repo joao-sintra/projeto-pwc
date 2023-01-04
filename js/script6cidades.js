@@ -1,8 +1,9 @@
 const apiKey = "3b465f1655e28cd3f0c1d9d517a22955";
 
 function colocaMaiuscula(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
+  return str.charAt(0).toUpperCase() + str.slice(1); //Põe a primeira letra da frase em maiúscula
 }
+
 let weather6Cidades = {
   fetchWeather: function (cidade) {
     fetch(

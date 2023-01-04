@@ -20,18 +20,23 @@ const urlParams = new URLSearchParams(queryString); // separa os parametros da s
 const cidade = urlParams.get("cidade"); // retira apenas a cidade do get
 console.log(cidade);
 
+//--------------------------- Data e hora atual ------------------------//
 var hoje = new Date();
-var data = hoje.getDate()+'-'+(hoje.getMonth()+1)+'-'+ hoje.getFullYear() +" " +hoje.getHours() + ":" + hoje.getMinutes();
+const nomeMeses = ["Jan", "Fev", "Mar", "Abr", "Maio", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+var data = hoje.toLocaleString('pt-pt', { hour: 'numeric', minute: 'numeric'}) + " " + (nomeMeses[hoje.getMonth()] + ' ' + hoje.getDate());
 
 dataHora.innerHTML = data;
+//---------------------------------//------------------------------------//
 
 function colocaMaiuscula(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-  function getPontoCardial(angulo) {
-    const direcoes = ['↑ N', '↗ NE', '→ E', '↘ SE', '↓ S', '↙ SW', '← W', '↖ NW'];
-    return direcoes[Math.round(angulo / 45) % 8];//Dividi a roda dos ventos em 8 partes iguais (360/8 =45)
-  }
+}
+
+function getPontoCardial(angulo) {
+  const direcoes = ['↑ N', '↗ NE', '→ E', '↘ SE', '↓ S', '↙ SW', '← W', '↖ NW'];
+  return direcoes[Math.round(angulo / 45) % 8];//Dividi a roda dos ventos em 8 partes iguais (360/8 =45)
+}
+
 let mostraDetalhesWeather = {
   fetchWeather: function (cidade) {
     fetch(

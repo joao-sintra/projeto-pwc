@@ -42,16 +42,16 @@
           </a>
         </li>
       </ul>
-      <div class="input-group my-2 my-lg-0" id="barraPesquisa">
-        <input type="search" class="form-control rounded mr-sm-2" placeholder="Pesquisa" id="textbox" />
-        <div class="autocom-box">
-
+      <form action="/forecast.html" method="GET" autocomplete="off">
+        <div class="input-group my-2 my-lg-0" id="barraPesquisaForecast">
+          <input type="text" class="form-control rounded mr-sm-2" placeholder="Pesquisa" name="cidade" id="textbox" />
+          <div class="autocom-box rounded-2">
+          </div>
+  
+          <input type="submit" class="btn btn-secondary" value="Pesquisar">
+  
         </div>
-      
-      <span class="input-group-text border-0 bg-secondary" id="search-addon">
-        <img id="icon-barra-pesquisa" src="img/icon_pesquisar.png">
-      </span>
-    </div>
+      </form>
 
     <div class="dropdown">
       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Unidades
@@ -63,7 +63,6 @@
     </div>
     </div>
     <!--Barra de Pesquisa-->
-    
 
   </nav>
 
@@ -78,67 +77,67 @@
     <input type="checkbox" class="btn-check " id="btn-check" autocomplete="off">
     <label class="btn bg-secondary" for="btn-check" onClick="location.href='forecast3h.html'">3 Horas</label>
   
-    <h2>Cidade</h2>
+    <h2 id="cidade">Cidade</h2> <!-- cidade -->
   </div>
     <div class="row mb-5 justify-content-center">
       <div class="col-sm-1 lista-forecast  py-3 mx-3 bg-secondary rounded-2 text-center">
-        <h3 class="text-center">Qua, 14</h3>
-        <img src="http://openweathermap.org/img/wn/04n@2x.png">
+        <h3 id="dia1" class="text-center">Qua, 14</h3>
+        <img id="imagem1" src="http://openweathermap.org/img/wn/04n@2x.png">
         <br>
-        <h4 class="d-inline temp-min">10º</h4>
-        <h4 class="d-inline  pl-4 temp-max">22º</h4>
-        <h4>↑<br> N</h4>
+        <h4 id="tempMin1" class="d-inline temp-min">10º</h4>
+        <h4 id="tempMax1" class="d-inline  pl-4 temp-max">22º</h4>
+        <h4 id="direcaoVento1">↑<br>N </h4>
         <br>
         <span class="inline"><img src="img/humidade.png">
-          <h4 class="humidade">30%</h4>
+          <h4 id="humidade1" class="humidade">30%</h4>
         </span>
       </div>
       <div class="col-sm-1 lista-forecast py-3 mx-3  bg-secondary rounded-2 text-center">
-        <h3 class="text-center">Qua, 14</h3>
-        <img src="http://openweathermap.org/img/wn/04n@2x.png">
+        <h3 id="dia2" class="text-center">Qua, 14</h3>
+        <img id="imagem2" src="http://openweathermap.org/img/wn/04n@2x.png">
         <br>
-        <h4 class="d-inline  temp-min">10º</h4>
-        <h4 class="d-inline pl-4 temp-max">22º</h4>
-        <h4>↑<br> N</h4>
+        <h4 id="tempMin2" class="d-inline  temp-min">10º</h4>
+        <h4 id="tempMax2" class="d-inline pl-4 temp-max">22º</h4>
+        <h4 id="direcaoVento2">↑<br> N</h4>
         <br>
         <span class="inline"><img src="img/humidade.png">
-          <h4 class="humidade">30%</h4>
+          <h4 id="humidade2" class="humidade">30%</h4>
         </span>
       </div>
       <div class="col-sm-1 lista-forecast py-3 mx-3  bg-secondary rounded-2 text-center">
-        <h3 class="text-center">Qua, 14</h3>
-        <img src="http://openweathermap.org/img/wn/04n@2x.png">
+        <h3 id="dia3" class="text-center">Qua, 14</h3>
+        <img id="imagem3" src="http://openweathermap.org/img/wn/04n@2x.png">
         <br>
-        <h4 class="d-inline temp-min">10º</h4>
-        <h4 class="d-inline pl-4  temp-max">22º</h4>
-        <h4>↑<br> N</h4>
+        <h4 id="tempMin3" class="d-inline temp-min">10º</h4>
+        <h4 id="tempMax3" class="d-inline pl-4  temp-max">22º</h4>
+        <h4 id="direcaoVento3">↑<br> N</h4>
         <br>
         <span class="inline"><img src="img/humidade.png">
-          <h4 class="humidade">30%</h4>
+          <h4 id="humidade3" class="humidade">30%</h4>
         </span>
       </div>
       <div class="col-sm-1 lista-forecast  py-3 mx-3  bg-secondary rounded-2 text-center">
-        <h3 class="text-center">Qua, 14</h3>
-        <img src="http://openweathermap.org/img/wn/04n@2x.png">
+        <h3 id="dia4" class="text-center">Qua, 14</h3>
+        <img id="imagem4" src="http://openweathermap.org/img/wn/04n@2x.png">
         <br>
-        <h4 class="d-inline temp-min">10º</h4>
-        <h4 class="d-inline pl-4  temp-max">22º</h4>
-        <h4>↑<br> N</h4>
+        <h4 id="tempMin4" class="d-inline temp-min">10º</h4>
+        <h4 id="tempMax4" class="d-inline pl-4  temp-max">22º</h4>
+        <h4 id="direcaoVento4">↑<br> N</h4>
         <br>
         <span class="inline"><img src="img/humidade.png">
-          <h4 class="humidade">30%</h4>
+          <h4 id="humidade4" class="humidade">30%</h4>
         </span>
       </div>
       <div class="col-sm-1 lista-forecast  py-3 mx-3  bg-secondary rounded-2 text-center">
-        <h3 class="text-center">Qua, 14</h3>
-        <img src="http://openweathermap.org/img/wn/04n@2x.png">
+        <h3 id="dia5" class="text-center">Qua, 14</h3>
+        <img id="imagem5" src="http://openweathermap.org/img/wn/04n@2x.png">
         <br>
-        <h4 class="d-inline temp-min">10º</h4>
-        <h4 class="d-inline pl-4  temp-max">22º</h4>
-        <h4>↑<br> N</h4>
+        <h4 id="tempMin5" class="d-inline temp-min">10º</h4>
+        <h4 id="tempMax5" class="d-inline pl-4 temp-max">22º</h4>
+        <h4 id="direcaoVento5">↑<br> N</h4>
         <br>
         <span class="inline"><img src="img/humidade.png">
-          <h4 class="humidade">30%</h4>
+          <h4 id="humidade5" class="humidade">30%</h4>
         </span>
       </div>
     </div>
@@ -161,6 +160,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>
     <script src="js/javascript.js"></script>
+    <script src="js/script_forecast.js"></script>
 </body>
 
 </html>
