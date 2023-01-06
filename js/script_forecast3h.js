@@ -48,16 +48,15 @@ let weatherForecast = {
     displayWeather: function (data) {
         var posicaoHoras = [0,1,2,3,4,5,6,7,8,9]; //Posição das horas do array
         for(var i=0;i<10;i++){
-            var posicaoEscolhida = posicaoHoras[i];
+            var posicao = posicaoHoras[i];
 
-            const { icon } = data.list[posicaoEscolhida].weather[0];
-            const { temp } = data.list[posicaoEscolhida].main;
-            const { humidity } = data.list[posicaoEscolhida].main;
-            const { deg } = data.list[posicaoEscolhida].wind;
+            const { icon } = data.list[posicao].weather[0];
+            const { temp } = data.list[posicao].main;
+            const { humidity } = data.list[posicao].main;
+            const { deg } = data.list[posicao].wind;
             const { country, name} = data.city;
-            const { dt_txt } = data.list[posicaoEscolhida];
 
-            //console.log(data);
+            console.log(data);
             document.querySelector("#cidade").innerHTML = name + ", " + country;
             document.querySelector("#imagem"+(i+1)).src = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
             document.querySelector("#temp"+(i+1)).innerHTML = temp + "º";
