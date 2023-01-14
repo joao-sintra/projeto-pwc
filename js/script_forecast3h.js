@@ -1,4 +1,4 @@
-const apiKey = "3b465f1655e28cd3f0c1d9d517a22955";
+//const apiKey = "3b465f1655e28cd3f0c1d9d517a22955";
 
 //0,8,16,24,32
 
@@ -31,9 +31,9 @@ dataHora.innerHTML = data;
 
 //--------------------------- Função que dá a direção do vento ------------------------//
 function getPontoCardial(angulo) {
-    const direcoes = ['↑ N', '↗ NE', '→ E', '↘ SE', '↓ S', '↙ SW', '← W', '↖ NW'];
-    return direcoes[Math.round(angulo / 45) % 8]; //Dividi a roda dos ventos em 8 partes iguais (360/8 =45)
-}
+    const direcoes = ['⬆️ N', '↗️ NE', '➡️ E', '↘️ SE', '⬇️ S', '↙️ SW', '⬅️ W', '↖️ NW'];
+    return direcoes[Math.round(angulo / 45) % 8];//Dividi a roda dos ventos em 8 partes iguais (360/8 =45)
+  }
 //---------------------------------//------------------------------------//
 
 let weatherForecast = {

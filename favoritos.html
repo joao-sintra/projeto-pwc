@@ -42,16 +42,21 @@
             </a>
           </li>
         </ul>
-        <div class="input-group my-2 my-lg-0" id="barraPesquisa">
-          <input type="search" class="form-control rounded mr-sm-2" placeholder="Pesquisa" id="textbox" />
-          <div class="autocom-box">
-  
+        <form action="/detalhes.html" method="GET" autocomplete="off">
+          <div class="input-group my-2 my-lg-0" id="barraPesquisa">
+            <input type="text" class="form-control rounded mr-sm-2" placeholder="Pesquisa" name="cidade" id="textbox" />
+            <div class="autocom-box rounded-2">
+              <ul id='lista-cidades'>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <input type="submit" class="btn btn-secondary" value="Pesquisar">
           </div>
-        
-        <span class="input-group-text border-0 bg-secondary" id="search-addon">
-          <img id="icon-barra-pesquisa" src="img/icon_pesquisar.png">
-        </span>
-      </div>
+        </form>
   
         <div class="dropdown">
           <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Unidades
@@ -110,7 +115,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="js/javascript.js"></script>
+    <script src="js/constantes.js"></script>
+  <script src="js/script_barra_pesquisa.js"></script>
+  <script src="js/scirpt_favoritos.js"></script>
+  
 </body>
 
 </html>
