@@ -17,81 +17,98 @@
 <body>
   <!-- Navegação -->
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 justify-content-between ">
-    
-      <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="logo weather" id="logo_pagina">
-        Weather</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!--Barra de navegação-->
-      <div class="collapse navbar-collapse" id="navmenu">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item ">
-            <a href="index.html" class="nav-link">
-              <h5>Home</h5>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="forecast.html" class="nav-link">
-              <h5>Forecast</h5>
-            </a>
-          </li>
-          <li class="nav-item active">
-            <a href="favoritos.html" class="nav-link">
-              <h5>Favoritos</h5>
-            </a>
-          </li>
-        </ul>
-        <div class="input-group my-2 my-lg-0" id="barraPesquisa">
-          <input type="search" class="form-control rounded mr-sm-2" placeholder="Pesquisa" id="textbox" />
-          <div class="autocom-box">
-  
-          </div>
-        
+
+    <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="logo weather" id="logo_pagina">
+      Weather</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--Barra de navegação-->
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a href="index.html" class="nav-link">
+            <h5>Home</h5>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="forecast.html" class="nav-link">
+            <h5>Forecast</h5>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a href="favoritos.html" class="nav-link">
+            <h5>Favoritos</h5>
+          </a>
+        </li>
+      </ul>
+      <div class="input-group my-2 my-lg-0" id="barraPesquisa">
+        <input type="search" class="form-control rounded mr-sm-2" placeholder="Pesquisa" id="textbox" />
+        <div class="autocom-box">
+
+        </div>
+
         <span class="input-group-text border-0 bg-secondary" id="search-addon">
           <img id="icon-barra-pesquisa" src="img/icon_pesquisar.png">
         </span>
       </div>
-  
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Unidades
-            <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">ºC, km/h, Mm</a></li>
-            <li><a href="#">ºF, Mph, In</a></li>
-          </ul>
-        </div>
+
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Unidades
+          <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">ºC, km/h, Mm</a></li>
+          <li><a href="#">ºF, Mph, In</a></li>
+        </ul>
       </div>
-      <!--Barra de Pesquisa-->
-      
-    
+    </div>
+    <!--Barra de Pesquisa-->
+
+
   </nav>
   <!--Mostrador do tempo das 6 cidades-->
   <div class="container-fluid mt-5 overflow-hidden ">
     <h1 class="text-center"><u>Favoritos</u></h1>
-   <br>
+    <br>
     <table class="table table-striped table-bordered">
-        <thead>
-          <tr>
-            <th scope="col">Nome</th>
-            <th scope="col">Clima</th>
-            <th scope="col">Temperatura</th>
-            <th scope="col">Humidade</th>
-            <th scope="col">Favorito</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="align-items-center">
-            <td>Lisboa</td>
-            <td><img id="imagemLisboa" src="http://openweathermap.org/img/wn/04n@2x.png" class="d-inline"> Nublado</td>
-            <td>15ºC</td>
-            <td>76%</td>
-            <td> <img src="img/favorito_preto.png" class="icon-favorito"></td>
-          </tr>
-         
-        </tbody>
-      </table>
-    
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Clima</th>
+          <th scope="col">Temperatura</th>
+          <th scope="col">Humidade</th>
+          <th scope="col">Favorito</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-favoritos">
+
+        <!-- <tr class="align-items-center">
+          <td>Lisboa</td>
+          <td><img id="imagemLisboa" src="http://openweathermap.org/img/wn/04n@2x.png" class="d-inline"> Nublado</td>
+          <td>15ºC</td>
+          <td>76%</td>
+          <td> <img src="img/favorito_preto.png" class="icon-favorito"></td>
+        </tr>
+
+        <tr class="align-items-center">
+          <td>Lisboa</td>
+          <td><img id="imagemLisboa" src="http://openweathermap.org/img/wn/04n@2x.png" class="d-inline"> Nublado</td>
+          <td>15ºC</td>
+          <td>76%</td>
+          <td> <img src="img/favorito_preto.png" class="icon-favorito"></td>
+        </tr>
+
+        <tr class="align-items-center">
+          <td>Lisboa</td>
+          <td><img id="imagemLisboa" src="http://openweathermap.org/img/wn/04n@2x.png" class="d-inline"> Nublado</td>
+          <td>15ºC</td>
+          <td>76%</td>
+          <td> <img src="img/favorito_preto.png" class="icon-favorito"></td>
+        </tr> -->
+
+      </tbody>
+    </table>
+
   </div>
   <!--Footer-->
   <div class="mt-5 p-4 bg-dark text-white text-center">
@@ -110,7 +127,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="js/javascript.js"></script>
+    <script src="js/script_local_storage.js"></script>
+    <script src="js/script_botoes_favoritos.js"></script>
+  <script src="js/script_favoritos.js"></script>
 </body>
 
 </html>

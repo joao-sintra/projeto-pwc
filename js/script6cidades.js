@@ -34,3 +34,4 @@ weather6Cidades.fetchWeather("Sagres");
 weather6Cidades.fetchWeather("Lagos");
 weather6Cidades.fetchWeather("Porto");
 weather6Cidades.fetchWeather("Leiria");
+
