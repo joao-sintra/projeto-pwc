@@ -28,7 +28,6 @@ for (let i = 0; i < favoritos.length; i++) {
       $(`#imagem${favoritos[i]}`).off()
       $(`#imagem${favoritos[i]}`).on('click', (event) => {
         atualizarFavoritos(favoritos[i]);
-        console.log("TESTE 123 BENFICA")
         $(event.target).parent().parent().remove();
       });
     });

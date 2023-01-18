@@ -8,22 +8,22 @@ let procuraCidade = {
   fetchCities: function (cidade) {
     fetch(
       "http://api.openweathermap.org/geo/1.0/direct?q=" +
-        cidade +
-        "&limit=3&lang=pt&appid=" +
-        apiKey
+      cidade +
+      "&limit=3&lang=pt&appid=" +
+      apiKey
     )
       .then((response) => response.json())
       .then((data) => this.displaycities(data));
   },
   displaycities: function (data) {
-    
+
     console.log(data);
     let cidades = "";
     let pais = "";
     for (let i = 0; i < data.length; i++) {
-      if (data[i].name ) { 
-        cidades = cidades + "<a href='detalhes.html?cidade="+data[i].name+","+data[i].country+"'><li>" + data[i].name + " " + "(" + data[i].country + ")" + "</li></a>";
-            
+      if (data[i].name) {
+        cidades = cidades + "<a href='detalhes.html?cidade=" + data[i].name + "," + data[i].country + "'><li>" + data[i].name + " " + "(" + data[i].country + ")" + "</li></a>";
+
       }
     }
 
@@ -34,20 +34,20 @@ let procuraCidade = {
 
 $("#textbox").keyup(function (event) {
   //Cada vez que o utilizador der release na tecla, ao escrever, é efetuada a pesquisa na API.
-  
+
   $(".autocom-box").show();
   if (event.target.value.trim() == "") {
     $(".autocom-box").hide();
   }
-  
+
   procuraCidade.fetchCities(input_box.value);
-  
+
 });
 
 /*-------Quando o utilzador clica fora da (Autocom-box) ela fecha.-----*/
 document.addEventListener("click", function ClickOutsideBox(event) {
   const box = document.querySelector("autocom-box");
   if (event.target.value !== box) {
-     $(".autocom-box").hide();
+    $(".autocom-box").hide();
   }
 });
