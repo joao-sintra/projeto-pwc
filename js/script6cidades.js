@@ -8,9 +8,9 @@ let weather6Cidades = {
   fetchWeather: function (cidade) {
     fetch(
       "http://api.openweathermap.org/data/2.5/weather?q=" +
-        cidade +
-        ",pt&units=metric&lang=pt&appid=" +
-        apiKey
+      cidade +
+      ",pt&units=metric&lang=pt&appid=" +
+      apiKey
     )
       .then((response) => response.json())
       .then((data) => this.displayWeather(data));
@@ -19,6 +19,7 @@ let weather6Cidades = {
     const { name } = data;
     const { icon, description } = data.weather[0];
     const { temp } = data.main;
+    const { country } = data.sys;
 
     document.querySelector("#cidade" + name).innerHTML = name;
     document.querySelector("#temp" + name).innerHTML = temp + " ºC";
@@ -27,6 +28,16 @@ let weather6Cidades = {
     document.querySelector("#clima" + name).innerHTML =
       colocaMaiuscula(description);
     console.log(name, temp);
+
+    let favoritos = carregarFavoritos();
+
+    document.querySelector("#icon" + name).setAttribute("data-cidade", name + ", " + country);
+    if (favoritos.indexOf(name + ", " + country) === -1) {
+      document.querySelector("#icon" + name).src = "img/favorito_preto.png"
+    }
+    else {
+      document.querySelector("#icon" + name).src = "img/favorito_vermelho.png";
+    }
   },
 };
 weather6Cidades.fetchWeather("Lisboa");

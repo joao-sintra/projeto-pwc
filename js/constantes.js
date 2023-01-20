@@ -10,3 +10,4 @@ const descNuvens = document.querySelector("#desc-nuvens");
 const descHumidade = document.querySelector("#desc-humidade");
 const descCordenadasGeograficas = document.querySelector("#desc-cord-geo");
 const descPressaoAtmosferica = document.querySelector("#desc-pressao-atm");
+const descIcon = document.querySelector("#desc-icon");

@@ -1,12 +1,10 @@
-const apiKey = "3b465f1655e28cd3f0c1d9d517a22955";
-
 /*-------Funcionalidade favoritos das paginas (Home).-----*/
 let favoritos = carregarFavoritos();
 for (let i = 0; i < favoritos.length; i++) {
   fetch(
     "http://api.openweathermap.org/data/2.5/weather?q=" +
     favoritos[i] +
-    ",pt&units=metric&lang=pt&appid=" +
+    "&units=metric&lang=pt&appid=" +
     apiKey
   )
     .then((response) => response.json())
@@ -27,7 +25,7 @@ for (let i = 0; i < favoritos.length; i++) {
 
       $(`#imagem${favoritos[i]}`).off()
       $(`#imagem${favoritos[i]}`).on('click', (event) => {
-        atualizarFavoritos(favoritos[i]);
+        gravarFavoritos(favoritos[i]);
         $(event.target).parent().parent().remove();
       });
     });
