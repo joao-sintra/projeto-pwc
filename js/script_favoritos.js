@@ -26,7 +26,6 @@ for (let i = 0; i < favoritos.length; i++) {
 
       $(`#imagem${nome_adaptado}`).off()
       $(`#imagem${nome_adaptado}`).on('click', (event) => {
-        console.log("TESTE 123");
         gravarFavoritos(favoritos[i]);
         $(event.target).parent().parent().remove();
       });

@@ -28,3 +28,5 @@ const gravarFavoritos = (cidadeName) => {
   }
 
   localStorage.setItem('Favoritos', JSON.stringify(favoritos));
+  return adicionouFavorito;
+}

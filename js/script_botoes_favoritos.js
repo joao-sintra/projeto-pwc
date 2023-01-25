@@ -19,15 +19,8 @@ $(".icon-favorito").on('click', (event) => {
   if (gravarFavoritos(cidadeName)) {
     event.target.src = "img/favorito_vermelho.png";
   }
-
   else {
     event.target.src = "img/favorito_preto.png";
   }
 });
 
-
-const criar_evento_favorito = () => { }
-$(".icon-favorito").on('click', (event) => {
-  const cidadeName = $(event.target).siblings("h2").text()
-  atualizarFavoritos(cidadeName);
-});
