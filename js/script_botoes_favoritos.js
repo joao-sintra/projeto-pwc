@@ -25,3 +25,9 @@ $(".icon-favorito").on('click', (event) => {
   }
 });
 
+
+const criar_evento_favorito = () => { }
+$(".icon-favorito").on('click', (event) => {
+  const cidadeName = $(event.target).siblings("h2").text()
+  atualizarFavoritos(cidadeName);
+});
