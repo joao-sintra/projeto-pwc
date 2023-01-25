@@ -14,17 +14,19 @@ for (let i = 0; i < favoritos.length; i++) {
       const { humidity, temp } = data.main;
       const { name } = data;
       const { icon, description } = data.weather[0];
+      const nome_adaptado = favoritos[i].replace(",", "").replace(" ", "")
 
       $("#tabela-favoritos").append(`<tr class="align-items-center">
     <td>${favoritos[i]}</td>
     <td><img src="http://openweathermap.org/img/wn/${icon}@2x.png" class="d-inline">${description}</td>
     <td>${temp}ºC</td>
     <td>${humidity}%</td>
-    <td> <img src="img/favorito_vermelho.png" id="imagem${favoritos[i]}" class="icon-favorito"></td>
+    <td> <img src="img/favorito_vermelho.png" id="imagem${nome_adaptado}" class="icon-favorito"></td>
     </tr>`)
 
-      $(`#imagem${favoritos[i]}`).off()
-      $(`#imagem${favoritos[i]}`).on('click', (event) => {
+      $(`#imagem${nome_adaptado}`).off()
+      $(`#imagem${nome_adaptado}`).on('click', (event) => {
+        console.log("TESTE 123");
         gravarFavoritos(favoritos[i]);
         $(event.target).parent().parent().remove();
       });
