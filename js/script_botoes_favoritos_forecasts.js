@@ -1,3 +1,5 @@
+//Script do icon dos favoritos, em que apanha o icon e verifica se está vermelho ou preto, 
+//se estiver vermelho o icon, significa que a cidade foi adicionada aos favoritos.
 const icons = document.getElementsByClassName("icon-favorito-forecast");
 
 $(".icon-favorito-forecast").on('click', (event) => {

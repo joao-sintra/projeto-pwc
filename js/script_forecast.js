@@ -5,7 +5,6 @@
 // forecast 5 dias
     //"https://api.openweathermap.org/data/2.5/forecast?lat=38.7167&lon=-9.1333&units=metric&cnt=40&appid="+
 
-
 const dataHora = document.querySelector("#data_hora");
 const queryString = window.location.search; // pega na string do url
 const urlParams = new URLSearchParams(queryString); // separa os parametros da string
