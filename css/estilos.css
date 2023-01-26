@@ -7,12 +7,16 @@
   float: right;
   margin-bottom: 10px;
 }
+
+.icon-favorito-forecast{
+  margin-top: 10px;
+}
 .navbar-collapse.collapse.in {
   display: block !important;
 }
 
 #icon-barra-pesquisa{
-    width: 25px;
+  width: 25px;
 }
 #textbox{
   width: 200px;

@@ -42,14 +42,19 @@
           </a>
         </li>
       </ul>
-      <form action="/detalhes.html" method="GET" autocomplete="off">
-        <div class="input-group my-2 my-lg-0" id="barraPesquisaForecast">
+      <form action="/forecast3h.html" method="GET" autocomplete="off">
+        <div class="input-group my-2 my-lg-0" id="barraPesquisa">
           <input type="text" class="form-control rounded mr-sm-2" placeholder="Pesquisa" name="cidade" id="textbox" />
           <div class="autocom-box rounded-2">
+            <ul id='lista-cidades'>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
           </div>
-  
           <input type="submit" class="btn btn-secondary" value="Pesquisar">
-  
         </div>
       </form>
 
@@ -72,8 +77,19 @@
       <label class="btn btn-secondary" for="btn-check" onClick="location.href='forecast.html'">5 Dias</label>
       <input type="checkbox" class="btn-check " id="btn-check" autocomplete="off">
       <label class="btn bg-primary" for="btn-check" onClick="location.href='forecast3h.html'">3 Horas</label>
-      <h2 id="cidade">Cidade</h2>
-      <h4 id="data_hora">Quarta-feira, 14 de Dezembro</h4>
+     
+    <ul class="list-unstyled">
+      <li>
+        <h2 id="cidade-forecast3h">Cidade</h2> <!-- cidade -->
+      </li>
+      <li>
+        <h4 id="data_hora">Quarta-feira, 14 de Dezembro</h4>
+      </li>
+      <li>
+        <img src="img/favorito_preto.png" class="icon-favorito-forecast" id="desc-icon">
+      </li>
+    </ul>
+
     </div>
     <div class="row mb-5 justify-content-center">
       <div class="col-sm-1 lista-forecast3h  py-3 mx-3 bg-secondary rounded-2 text-center">
@@ -186,25 +202,23 @@
     </div>
     <!--Footer-->
     <div class="mt-5 p-4 bg-dark text-white text-center">
-      <p>© João, Francisco, Rúben</p>
+      <p>© João Sintra, Francisco Furtado, Rúben Amaral</p>
       <p>Unidade Curricular: PWC</p>
       <hr>
       <a href="https://openweathermap.org/api" target="_blank">OpenWeather</a>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"></script>
-      <script src="js/constantes.js"></script>
-      <script src="js/javascript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="js/constantes.js"></script>
     <script src="js/script_forecast3h.js"></script>
-    
+    <script src="js/script_barra_pesquisa_forecast3h.js"></script>
+    <script src="js/script_local_storage.js"></script>
+    <script src="js/script_botoes_favoritos_forecasts.js"></script>
+    <script src="js/script_favoritos_forecasts.js"></script>
+   
 </body>
 
 </html>

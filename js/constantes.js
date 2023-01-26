@@ -11,3 +11,6 @@ const descHumidade = document.querySelector("#desc-humidade");
 const descCordenadasGeograficas = document.querySelector("#desc-cord-geo");
 const descPressaoAtmosferica = document.querySelector("#desc-pressao-atm");
 const descIcon = document.querySelector("#desc-icon");
+
+const nomeCidadeForecast = document.querySelector("#cidade-forecast");
+const nomeCidadeForecast3h = document.querySelector("#cidade-forecast3h");

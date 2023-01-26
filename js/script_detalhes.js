@@ -86,9 +86,14 @@ let mostraDetalhesWeather = {
     }
   },
 };
-/*-------pesquisa das cidades à escolha do utilizador, conforme o que é escrito na (#textbox)-----*/
 
-mostraDetalhesWeather.fetchWeather(cidade);
+
+if(cidade != null) {
+  mostraDetalhesWeather.fetchWeather(cidade);
+}else
+mostraDetalhesWeather.fetchWeather("Lisboa");
+
+/*-------pesquisa das cidades à escolha do utilizador, conforme o que é escrito na (#textbox)-----*/
 
 $("#search-addon").click(function (e) {
   e.preventDefault();
