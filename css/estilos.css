@@ -6,51 +6,56 @@
 .icon-favorito {
   float: right;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
-.icon-favorito-forecast{
+.icon-favorito-forecast {
   margin-top: 10px;
+  cursor: pointer;
 }
 .navbar-collapse.collapse.in {
   display: block !important;
 }
 
-#icon-barra-pesquisa{
+#icon-barra-pesquisa {
   width: 25px;
 }
-#textbox{
+#textbox {
   width: 200px;
 }
-#barraPesquisa{
+#barraPesquisa {
   width: 300px;
 }
-.btn.btn-primary.dropdown-toggle{
-    margin-left: 10px !important;
+.btn.btn-primary.dropdown-toggle {
+  margin-left: 10px !important;
 }
-.lista-6-cidades, .lista-forecast, .lista-forecast3h{
+.lista-6-cidades,
+.lista-forecast,
+.lista-forecast3h {
   background-color: #8ab4df !important;
   margin: 40px;
   border: 3px solid black;
 }
-h2{
+h2 {
   margin-top: 12px;
 }
-.navbar-brand{
+.navbar-brand {
   font-size: 30px;
-  
 }
 
-.table, #forecast, #detalhes {
+.table,
+#forecast,
+#detalhes {
   margin: auto;
-  width: 50% !important; 
+  width: 50% !important;
 }
-.temp-max{
-  color:rgb(209, 157, 59);
+.temp-max {
+  color: rgb(209, 157, 59);
 }
-.temp-min{
-  color:rgb(50, 59, 161);
+.temp-min {
+  color: rgb(50, 59, 161);
 }
-.humidade{
+.humidade {
   display: inline;
 }
 .autocom-box {
@@ -63,14 +68,13 @@ h2{
   display: none;
   border: 3px solid black;
   font-size: 17px;
-  
 }
-.autocom-box ul{
+.autocom-box ul {
   padding: 0;
- 
+
   list-style: none;
 }
-.autocom-box ul li{
+.autocom-box ul li {
   padding: 5px 0;
 }
 .autocom-box ul li:hover {
