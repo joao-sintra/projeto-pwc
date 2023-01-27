@@ -6,11 +6,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+  <!-- Link para usar bootstrap na página -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+  
+  <!-- Link para utilizar icons (Por exemplo: icon dos favoritos) -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Link para o estilos da página -->
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 
@@ -42,6 +46,8 @@
           </a>
         </li>
       </ul>
+      
+      <!--Barra de Pesquisa-->
       <form action="/forecast3h.html" method="GET" autocomplete="off">
         <div class="input-group my-2 my-lg-0" id="barraPesquisa">
           <input type="text" class="form-control rounded mr-sm-2" placeholder="Pesquisa" name="cidade" id="textbox" />
@@ -74,26 +80,33 @@
   <div class="container-fluid mt-5 overflow-hidden p-5">
     <h1 class="text-center"><u>Forecast</u></h1>
     <div class="pl-2" id="forecast">
+      <!-- Opção para mostrar o forecast num espaço de 5 dias -->
+
     <input type="checkbox" class="btn-check " id="btn-check" autocomplete="off">
     <label class="btn btn-secondary" for="btn-check" onClick="devolveCidade5d()">5 Dias</label>
   
-  
+        <!-- Opção para mostrar o forecast num espaço de 3 horas -->
+
     <input type="checkbox" class="btn-check " id="btn-check" autocomplete="off">
     <label class="btn bg-primary" for="btn-check" onClick="devolveCidade3h()">3 Horas</label>
      
     <ul class="list-unstyled">
       <li>
+        <!-- Mostra a cidade que está a ver o forecast -->
         <h2 id="cidade-forecast3h">Cidade</h2> <!-- cidade -->
       </li>
       <li>
+        <!-- Mostra a data e hora atual em que está a ver o forecast -->
         <h4 id="data_hora">Quarta-feira, 14 de Dezembro</h4>
       </li>
       <li>
+        <!-- Icon para adicionar a cidade nos favoritos ou mostra o icon a preto, se a cidade não estiver no favoritos  -->
         <img src="img/favorito_preto.png" class="icon-favorito-forecast" id="desc-icon">
       </li>
     </ul>
 
     </div>
+    <!-- Primeira linha com as horas desde da 00:00 até às 06:00 do forecast -->
     <div class="row mb-5 justify-content-center">
       <div class="col-sm-1 lista-forecast3h  py-3 mx-3 bg-secondary rounded-2 text-center">
         <h3 class="text-center">00:00</h3>
@@ -128,8 +141,9 @@
           <h4 id="humidade3" class="humidade">30%</h4>
         </span>
       </div>
-
     </div>
+
+    <!-- Segunda linha com as horas desde da 09:00 até às 15:00 do forecast -->
     <div class="row mb-5 justify-content-center">
       <div class="col-sm-1 lista-forecast3h  py-3 mx-3 bg-secondary rounded-2 text-center">
         <h3 class="text-center">09:00</h3>
@@ -164,8 +178,9 @@
           <h4 id="humidade6" class="humidade">30%</h4>
         </span>
       </div>
-
     </div>
+
+    <!-- Terceira linha com as horas desde da 18:00 até às 00:00 do forecast -->
     <div class="row mb-5 justify-content-center">
       <div class="col-sm-1 lista-forecast3h  py-3 mx-3 bg-secondary rounded-2 text-center">
         <h3 class="text-center">18:00</h3>
@@ -200,9 +215,8 @@
           <h4 id="humidade9" class="humidade">30%</h4>
         </span>
       </div>
-
     </div>
-    </div>
+  </div>
     <!--Footer-->
     <div class="mt-5 p-4 bg-dark text-white text-center">
       <p>© João Sintra, Francisco Furtado, Rúben Amaral</p>
@@ -211,18 +225,30 @@
       <a href="https://openweathermap.org/api" target="_blank">OpenWeather</a>
     </div>
 
+    <!-- Script para se poder usar jquery e da biblioteca jqyery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    
+    <!-- Script para se poder usar bootstrap e da biblioteca bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Script das constantes.js -->
     <script src="js/constantes.js"></script>
     <script src="js/unidades.js"></script>
     <script src="js/script_forecast3h.js"></script>
+
+    <!-- Script da barra de pesquisa do forecast3h js (Apenas o forecast das 3 horas) -->
     <script src="js/script_barra_pesquisa_forecast3h.js"></script>
+
+    <!-- Script do local storage js -->
     <script src="js/script_local_storage.js"></script>
+
+    <!-- Script dos botões/icones favoritos nos forecasts (5D/3H) -->
     <script src="js/script_botoes_favoritos_forecasts.js"></script>
+
+    <!-- Script dos favoritos forecasts (5D/3H) -->
     <script src="js/script_favoritos_forecasts.js"></script>
-   
 </body>
 
 </html>

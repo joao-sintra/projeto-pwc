@@ -1,5 +1,3 @@
-//0,8,16,24,32
-
 // forecast 3 horas
     //"https://api.openweathermap.org/data/2.5/forecast?q=Lisboa&units=metric&lang=pt&cnt=9&appid=" +
 
@@ -16,8 +14,6 @@
 // }
 
 // dataHora.innerHTML = colocaMaiuscula(diaAtual());
-
-//const apiKey = "3b465f1655e28cd3f0c1d9d517a22955";
 
 const dataHora = document.querySelector("#data_hora");
 const queryString = window.location.search; // pega na string do url

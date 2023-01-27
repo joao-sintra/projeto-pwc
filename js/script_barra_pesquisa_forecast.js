@@ -71,10 +71,9 @@ $("#textbox").keyup(function (event) {
   }
   procuraCidadeLocalizacao.fetchCities(latitude, longitude);
   procuraCidade.fetchCities(input_box.value);
-
 });
 
-/*-------Quando o utilzador clica fora da (Autocom-box) ela fecha.-----*/
+/*------- Quando o utilzador clica fora da (Autocom-box) ela fecha. -----*/
 document.addEventListener("click", function ClickOutsideBox(event) {
   const box = document.querySelector("autocom-box");
   if (event.target.value !== box) {

@@ -1,4 +1,4 @@
-/*------- Funcionalidade favoritos das paginas -----*/
+/*------- Funcionalidade favoritos das páginas Forecast (5D/3H) -----*/
 let favoritos = carregarFavoritos();
 for (let i = 0; i < favoritos.length; i++) {
   fetch(
@@ -21,7 +21,7 @@ for (let i = 0; i < favoritos.length; i++) {
     <td><img src="http://openweathermap.org/img/wn/${icon}@2x.png" class="d-inline">${description}</td>
     <td>${temp}ºC</td>
     <td>${humidity}%</td>
-    <td> <img src="img/favorito_vermelho.png" id="imagem${nome_adaptado}" class="icon-favorito-forecast"></td>
+    <td> <img src="img/favorito_vermelho.png" id="imagem${nome_adaptado}" class="icon-favorito-forecast"></td> 
     </tr>`)
 
       $(`#imagem${nome_adaptado}`).off()
