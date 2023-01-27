@@ -26,11 +26,11 @@ function getPontoCardial(angulo) {
 }
 
 let mostraDetalhesWeather = {
-  fetchWeather: function (cidade) {
+  fetchWeather: function (cidade, unidades) {
     fetch(
       "http://api.openweathermap.org/data/2.5/weather?q=" +
       cidade +
-      "&units=metric&lang=pt&appid=" +
+      "&units="+unidades+"&lang=pt&appid=" +
       apiKey
     )
       .then((response) => response.json())
@@ -38,7 +38,7 @@ let mostraDetalhesWeather = {
   },
   displayWeather: function (data) {
     if (data.cod == 404) {
-      console.log("errouu");
+      console.log("erro");
     }
     const { name } = data;
     const { icon, description } = data.weather[0];
@@ -53,12 +53,21 @@ let mostraDetalhesWeather = {
     const { lon } = data.coord;
     const { country } = data.sys;
 
+    let simboloUnidadesTemperatura=" ºC";
+    let simboloUnidadesVelocidade=" Km/H";
+    if(unidades=="imperial"){
+      simboloUnidadesTemperatura=" ºF"
+      simboloUnidadesVelocidade=" Mph";
+    }
+
     descNomeCidade.innerHTML = name + ", " + "<img src='https://flagsapi.com/" + country + "/flat/48.png'>";
     descImagem.src = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
     descClima.innerHTML = colocaMaiuscula(description);
-    descTemperatura.innerHTML = temp + " ºC"
-    descSensacaoTermica.innerHTML = "Sensação térmica: " + feels_like + " ºC"
-    descVento.innerHTML = speed + " m/s ";
+   
+      
+    descTemperatura.innerHTML = temp + simboloUnidadesTemperatura
+    descSensacaoTermica.innerHTML = "Sensação térmica: " + feels_like + simboloUnidadesTemperatura
+    descVento.innerHTML = speed + simboloUnidadesVelocidade;
     descDirecaoVento.innerHTML = getPontoCardial(deg);
     descPressaoAtmosferica.innerHTML = pressure + " hPa";
     descNuvens.innerHTML = all + " %"
@@ -89,9 +98,9 @@ let mostraDetalhesWeather = {
 
 
 if(cidade != null) {
-  mostraDetalhesWeather.fetchWeather(cidade);
+  mostraDetalhesWeather.fetchWeather(cidade, unidades);
 }else
-mostraDetalhesWeather.fetchWeather("Lisboa");
+mostraDetalhesWeather.fetchWeather("Lisboa", unidades);
 
 /*-------pesquisa das cidades à escolha do utilizador, conforme o que é escrito na (#textbox)-----*/
 

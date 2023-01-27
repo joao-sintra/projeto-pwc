@@ -12,12 +12,12 @@ const carregarFavoritos = () => {
 
 }
 
-const gravarFavoritos = (cidadeName) => {
+const gravarFavoritos = (unidade) => {
   let favoritos = carregarFavoritos();
   let adicionouFavorito;
-  const index = favoritos.indexOf(cidadeName)
+  const index = favoritos.indexOf(unidade)
   if (index === -1) {
-    favoritos.push(cidadeName)
+    favoritos.push(unidade)
 
     adicionouFavorito = true;
   }

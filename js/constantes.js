@@ -1,5 +1,6 @@
 const apiKey = "3b465f1655e28cd3f0c1d9d517a22955";
 const descNomeCidade = document.querySelector("#desc-cidade");
+const unidades = localStorage.getItem('unidades');
 const descTemperatura = document.querySelector("#desc-temperatura");
 const descImagem = document.querySelector("#desc-imagem");
 const descClima = document.querySelector("#desc-clima");

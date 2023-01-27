@@ -4,7 +4,7 @@ for (let i = 0; i < favoritos.length; i++) {
   fetch(
     "http://api.openweathermap.org/data/2.5/weather?q=" +
     favoritos[i] +
-    "&units=metric&lang=pt&appid=" +
+    "&units="+unidades+"&lang=pt&appid=" +
     apiKey
   )
     .then((response) => response.json())
@@ -15,14 +15,13 @@ for (let i = 0; i < favoritos.length; i++) {
       const { name } = data;
       const { icon, description } = data.weather[0];
       const nome_adaptado = favoritos[i].replace(",", "").replace(" ", "")
-
-      $("#tabela-favoritos").append(`<tr class="align-items-center">
-    <td>${favoritos[i]}</td>
-    <td><img src="http://openweathermap.org/img/wn/${icon}@2x.png" class="d-inline">${description}</td>
-    <td>${temp}ºC</td>
-    <td>${humidity}%</td>
-    <td> <img src="img/favorito_vermelho.png" id="imagem${nome_adaptado}" class="icon-favorito"></td>
-    </tr>`)
+      let simboloUnidadesTemperatura=" ºC";
+      let simboloUnidadesVelocidade=" Km/H";
+      if(unidades=="imperial"){
+        simboloUnidadesTemperatura=" ºF"
+        simboloUnidadesVelocidade=" Mph";
+      }
+      $("#tabela-favoritos").append('<tr class="align-items-center">    <td>'+favoritos[i]+'</td>    <td><img src="http://openweathermap.org/img/wn/'+icon+'@2x.png" class="d-inline">'+description+'</td>    <td>'+ temp + simboloUnidadesTemperatura+'</td>    <td>'+humidity+'%</td>    <td> <img src="img/favorito_vermelho.png" id="imagem+'+nome_adaptado+'" class="icon-favorito"></td>    </tr>')
 
       $(`#imagem${nome_adaptado}`).off()
       $(`#imagem${nome_adaptado}`).on('click', (event) => {
@@ -30,5 +29,4 @@ for (let i = 0; i < favoritos.length; i++) {
         $(event.target).parent().parent().remove();
       });
     });
-
 }

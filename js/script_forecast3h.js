@@ -22,10 +22,19 @@
 const dataHora = document.querySelector("#data_hora");
 const queryString = window.location.search; // pega na string do url
 const urlParams = new URLSearchParams(queryString); // separa os parametros da string
-const cidade = urlParams.get("cidade"); // retira apenas a cidade do get
+var cidade = urlParams.get("cidade"); // retira apenas a cidade do get
 console.log(cidade);
 nomeCidadeForecast3h.innerHTML = cidade;
 
+if(cidade == null)
+  cidade="Lisboa";
+  
+function devolveCidade5d(){
+  return location.href='forecast.html?cidade='+cidade;
+}
+function devolveCidade3h(){
+  return location.href='forecast3h.html?cidade='+cidade;
+}
 //--------------------------- Data e hora atual ------------------------//
 var hoje = new Date();
 const nomeMeses = ["Jan", "Fev", "Mar", "Abr", "Maio", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
@@ -42,11 +51,11 @@ function getPontoCardial(angulo) {
 //---------------------------------//------------------------------------//
 
 let weatherForecast3h = {
-    fetchWeather: function (cidade) {
+    fetchWeather: function (cidade, unidades) {
       fetch(
        "https://api.openweathermap.org/data/2.5/forecast?q=" + 
         cidade +
-        "&units=metric&lang=pt&cnt=9&appid=" + 
+        "&units="+unidades+"&lang=pt&cnt=9&appid=" + 
         apiKey
       )
         .then((response) => response.json())
@@ -87,15 +96,10 @@ let weatherForecast3h = {
     },
 };
 
-if(cidade != null) {
-    weatherForecast3h.fetchWeather(cidade);
-}
-else{
-    weatherForecast3h.fetchWeather("Lisboa");
-}
+
+weatherForecast3h.fetchWeather(cidade, unidades);
 
 /*------- Pesquisa das cidades à escolha do utilizador, conforme o que é escrito na (#textbox) -----*/
-
 $("#search-addon").click(function (e) {
   e.preventDefault();
   var valorPesquisa = document.querySelector("#textbox").value;

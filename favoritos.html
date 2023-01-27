@@ -47,11 +47,12 @@
           <input type="text" class="form-control rounded mr-sm-2" placeholder="Pesquisa" name="cidade" id="textbox" />
           <div class="autocom-box rounded-2">
             <ul id='lista-cidades'>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li id="localizacao-atual"></li>
+              <li id="item1"></li>
+              <li id="item2"></li>
+              <li id="item3"></li>
+              <li id="item4"></li>
+              <li id="item5"></li>
             </ul>
           </div>
           <input type="submit" class="btn btn-secondary" value="Pesquisar">
@@ -59,11 +60,11 @@
       </form>
 
       <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Unidades
-          <span class="caret"></span></button>
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+          <span class="caret">Unidades</span></button>
         <ul class="dropdown-menu">
-          <li><a href="#">ºC, km/h, Mm</a></li>
-          <li><a href="#">ºF, Mph, In</a></li>
+          <li id="unidade-c"><a href="#">ºC, km/h, Mm</a></li>
+          <li id="unidade-f"><a href="#">ºF, Mph, In</a></li>
         </ul>
       </div>
     </div>
@@ -135,6 +136,7 @@
     crossorigin="anonymous"></script>
 
   <script src="js/constantes.js"></script>
+  <script src="js/unidades.js"></script>
   <script src="js/script_barra_pesquisa.js"></script>
   <script src="js/script_local_storage.js"></script>
   <script src="js/script_botoes_favoritos.js"></script>

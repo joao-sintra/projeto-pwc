@@ -5,11 +5,12 @@ function colocaMaiuscula(str) {
 }
 
 let weather6Cidades = {
-  fetchWeather: function (cidade) {
+  
+  fetchWeather: function (cidade, unidades) {
     fetch(
       "http://api.openweathermap.org/data/2.5/weather?q=" +
       cidade +
-      ",pt&units=metric&lang=pt&appid=" +
+      ",pt&units="+unidades+"&lang=pt&appid=" +
       apiKey
     )
       .then((response) => response.json())
@@ -21,8 +22,14 @@ let weather6Cidades = {
     const { temp } = data.main;
     const { country } = data.sys;
 
+    let simboloUnidadesTemperatura=" ºC";
+    let simboloUnidadesVelocidade=" Km/H";
+    if(unidades=="imperial"){
+      simboloUnidadesTemperatura=" ºF"
+      simboloUnidadesVelocidade=" Mph";
+    }
     document.querySelector("#cidade" + name).innerHTML = name;
-    document.querySelector("#temp" + name).innerHTML = temp + " ºC";
+    document.querySelector("#temp" + name).innerHTML = temp + simboloUnidadesTemperatura;
     document.querySelector("#imagem" + name).src =
       "http://openweathermap.org/img/wn/" + icon + "@2x.png";
     document.querySelector("#clima" + name).innerHTML =
@@ -40,10 +47,46 @@ let weather6Cidades = {
     }
   },
 };
-weather6Cidades.fetchWeather("Lisboa");
-weather6Cidades.fetchWeather("Faro");
-weather6Cidades.fetchWeather("Sagres");
-weather6Cidades.fetchWeather("Lagos");
-weather6Cidades.fetchWeather("Porto");
-weather6Cidades.fetchWeather("Leiria");
+weather6Cidades.fetchWeather("Lisboa", unidades);
+weather6Cidades.fetchWeather("Faro", unidades);
+weather6Cidades.fetchWeather("Sagres", unidades);
+weather6Cidades.fetchWeather("Lagos", unidades);
+weather6Cidades.fetchWeather("Porto", unidades);
+weather6Cidades.fetchWeather("Leiria", unidades);
 
+//Funções para redirecionar para a página de detalhes da cidade
+$("#porto").click(function (e) {
+  e.preventDefault();
+  location.href='detalhes.html?cidade=Porto, PT';
+  
+});
+
+$("#leiria").click(function (e) {
+  e.preventDefault();
+  location.href='detalhes.html?cidade=Leiria, PT';
+  
+});
+
+$("#lisboa").click(function (e) {
+  e.preventDefault();
+  location.href='detalhes.html?cidade=Lisboa, PT';
+  
+});
+
+$("#faro").click(function (e) {
+  e.preventDefault();
+  location.href='detalhes.html?cidade=Faro, PT';
+  
+});
+
+$("#sagres").click(function (e) {
+  e.preventDefault();
+  location.href='detalhes.html?cidade=Sagres, PT';
+  
+});
+
+$("#lagos").click(function (e) {
+  e.preventDefault();
+  location.href='detalhes.html?cidade=Lagos, PT';
+  
+});

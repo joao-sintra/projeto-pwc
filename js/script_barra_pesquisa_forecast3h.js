@@ -3,13 +3,48 @@
 const input_box = document.getElementById("textbox");
 const autocom_box = document.querySelector(".autocom-box");
 
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(getLongitude);
+  navigator.geolocation.getCurrentPosition(getLatitude);
+}
+let latitude;
+let longitude
+
+function getLongitude(position){
+   longitude = position.coords.longitude;
+}
+
+function getLatitude(position){
+   latitude =position.coords.latitude;
+}
+
+let procuraCidadeLocalizacao = {
+  /*-------Mostrar os dados das cidades em [Array] à escolha do utilizador (Autocomplete-Box)-----*/
+  fetchCities: function (latitude, longitude) {
+   
+    fetch(
+      "http://api.openweathermap.org/geo/1.0/reverse?lat="+latitude+"&lon="+longitude+"&limit=3&lang=pt&appid=" +
+      apiKey
+    )
+      .then((response) => response.json())
+      .then((data) => this.displaycities(data));
+  },
+  displaycities: function (data) {
+
+    console.log(data);
+    let cidade_localizacao = "";
+    let pais = "";
+      
+    document.querySelector("#localizacao-atual").innerHTML="<a href='forecast3h.html?cidade=" + data[0].name + "," + data[0].country + "'><li>Localização Atual</li></a>";
+  },
+};
+
 let procuraCidade = {
   /*-------Mostrar os dados das cidades em [Array] à escolha do utilizador (Autocomplete-Box)-----*/
   fetchCities: function (cidade) {
+   
     fetch(
-      "http://api.openweathermap.org/geo/1.0/direct?q=" +
-      cidade +
-      "&limit=3&lang=pt&appid=" +
+      "http://api.openweathermap.org/geo/1.0/direct?q="+cidade+"&limit=3&lang=pt&appid=" +
       apiKey
     )
       .then((response) => response.json())
@@ -21,14 +56,12 @@ let procuraCidade = {
     let cidades = "";
     let pais = "";
     for (let i = 0; i < data.length; i++) {
+      //cidades= procuraCidadeLocalizacao.fetchCities(latitude, longitude);
       if (data[i].name) {
-        cidades = cidades + "<a href='forecast3h.html?cidade=" + data[i].name + "," + data[i].country + "'><li>" + data[i].name + " " + "(" + data[i].country + ")" + "</li></a>";
-
+        document.querySelector("#item"+(i+1)).innerHTML ="<a href='forecast3h.html?cidade=" + data[i].name + "," + data[i].country + "'><li>" + data[i].name + " " + "(" + data[i].country + ")" + "</li></a>";
+        
       }
     }
-
-    autocom_box.innerHTML = "<ul id='lista-cidades'>" + cidades + "</ul>";
-    
   },
 };
 
@@ -39,7 +72,7 @@ $("#textbox").keyup(function (event) {
   if (event.target.value.trim() == "") {
     $(".autocom-box").hide();
   }
-
+  procuraCidadeLocalizacao.fetchCities(latitude, longitude);
   procuraCidade.fetchCities(input_box.value);
 
 });

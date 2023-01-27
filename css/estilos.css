@@ -76,3 +76,9 @@ h2{
 .autocom-box ul li:hover {
   background: rgb(149, 158, 238);
 }
+#porto, #leiria, #lagos, #sagres, #lisboa, #faro{
+  cursor:pointer;
+}
+#porto:hover, #leiria:hover, #lagos:hover, #sagres:hover, #lisboa:hover, #faro:hover{
+  box-shadow: 3px 3px;
+}
