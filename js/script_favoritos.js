@@ -16,12 +16,17 @@ for (let i = 0; i < favoritos.length; i++) {
       const { icon, description } = data.weather[0];
 
       const nome_adaptado = favoritos[i].replace(",", "").replace(" ", "")
-
+      let simboloUnidadesTemperatura=" ºC";
+      let simboloUnidadesVelocidade=" Km/H";
+      if(unidades=="imperial"){
+        simboloUnidadesTemperatura=" ºF"
+        simboloUnidadesVelocidade=" Mph";
+      }
 
       $("#tabela-favoritos").append(`<tr class="align-items-center">
     <td class="favorito-nome"><a href='detalhes.html?cidade=${favoritos[i]}'>${favoritos[i]}</a></td>
     <td><img src="http://openweathermap.org/img/wn/${icon}@2x.png" class="d-inline">${description}</td>
-    <td>${temp}ºC</td>
+    <td>${temp}`+simboloUnidadesTemperatura+`</td>
     <td>${humidity}%</td>
     <td> <img src="img/favorito_vermelho.png" id="imagem${nome_adaptado}" class="icon-favorito"></td>
     </tr>`)

@@ -52,7 +52,7 @@ function formataData(date) {
 //------ Função que apanha a data da API, converte e devolve só o dia da data em dia da semana ------ //
 function diaSemana(data){
     const dataCompleta = new Date(data);
-    const options = { weekday: 'long' };
+    const options = { weekday: 'short' };
     return dataCompleta.toLocaleDateString('pt-pt', options); //Converte o dia para dia da semana
 }
 //---------------------------------//------------------------------------//

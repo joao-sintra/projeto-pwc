@@ -13,6 +13,9 @@
   margin-top: 10px;
   cursor: pointer;
 }
+h4{
+  padding: 10px;
+}
 .navbar-collapse.collapse.in {
   display: block !important;
 }
@@ -50,10 +53,13 @@ h2 {
   width: 50% !important;
 }
 .temp-max {
-  color: rgb(209, 157, 59);
+  color: rgb(182, 7, 16);
 }
 .temp-min {
-  color: rgb(50, 59, 161);
+  color: rgb(25, 39, 185);
+}
+.temp-atual{
+  color: #0022b8;
 }
 .humidade {
   display: inline;
@@ -82,7 +88,4 @@ h2 {
 }
 #porto, #leiria, #lagos, #sagres, #lisboa, #faro{
   cursor:pointer;
-}
-#porto:hover, #leiria:hover, #lagos:hover, #sagres:hover, #lisboa:hover, #faro:hover{
-  box-shadow: 3px 3px;
 }
